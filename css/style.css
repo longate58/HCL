@@ -138,7 +138,7 @@ header .navigation li a:hover
 	section
 	{
 		padding: 40px;
-		background: url(../imagenes/bg2.jpg) black;
+		background: url(../imagenes/bg2.png) black;
 		background-size: cover;
 		background-position: center;
 	}
