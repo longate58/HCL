@@ -8,12 +8,13 @@
 }
 
 
+
 section
 {
 	position: relative;
 	width: 100%;
 	min-height: 100vh;
-	background: url("../imagenes/bg.png") black;
+	background: url("../imagenes/bg.png");
 	background-size: cover;
 	background-position: center;
 	display: flex;
@@ -34,16 +35,6 @@ header
 	align-items: center;
 }
 
-header .logo
-{
-	position: relative;
-	font-size: 2em;
-	color: #fff;
-	text-transform: uppercase;
-	font-weight: 700;
-	text-decoration: none;
-	letter-spacing: 1px;
-}
 header .navigation
 {
 	position: relative;
@@ -128,6 +119,8 @@ header .navigation li a:hover
 	color: #fff;
 	line-height: 1em;
 }
+
+
 @media (max-width: 991px)
 {
 	header
@@ -138,7 +131,7 @@ header .navigation li a:hover
 	section
 	{
 		padding: 40px;
-		background: url(../imagenes/bg2.png) black;
+		background: url(../imagenes/bg2.png);
 		background-size: cover;
 		background-position: center;
 	}
@@ -152,14 +145,14 @@ header .navigation li a:hover
 		background-size: cover;
 		background-position: center;
 	}
-	.header .navigation
+	header .navigation
 	{
 		position: fixed;
 		top: 0;
 		left: 0;
 		right: 0;
 		bottom: 0;
-		background: #fff;
+		background: #000;
 		z-index: 10;
 		display: none;
 		justify-content: center;
@@ -170,7 +163,7 @@ header .navigation li a:hover
 	{
 		display: flex;
 	}
-	.header .navigation li a
+	header .navigation li a
 	{
 		font-size: 24px;
 		margin: 10px 0;
@@ -180,7 +173,7 @@ header .navigation li a:hover
 		position: relative;
 		width: 30px;
 		height: 30px;
-		background: url(menu.png);
+		background: url(../imagenes/menu.png);
 		background-position: center;
 		background-size: 30px;
 		background-repeat: no-repeat;
@@ -189,7 +182,7 @@ header .navigation li a:hover
 	}
 	.toggleMenu.active
 	{
-		background: url(close.png);
+		background: url(../imagenes/close.png);
 		background-position: center;
 		background-size: 26px;
 		background-repeat: no-repeat;
