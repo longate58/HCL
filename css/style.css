@@ -61,7 +61,7 @@ header .navigation li a:hover
 
 .content
 {
-	max-width: 600px;
+	max-width: 500px;
 }
 
 .content .contentHcl h2
@@ -75,8 +75,8 @@ header .navigation li a:hover
 {
 	font-size: 1.1em;
 	color: #fff;
-	font-weight: 300;
-	margin: 20px 0;
+	font-weight: 200;
+	margin: 15px 0;
 }
 
 .content .contentHcl a
@@ -121,8 +121,58 @@ header .navigation li a:hover
 }
 
 
-@media (max-width: 991px)
-{
+/*              Viewport less then or equal to 1130px            */
+@media only screen and (max-width: 1130px) {
+	header
+	{
+		padding: 15px 40px;
+		font-size: 12px;
+	}
+	section
+	{
+		padding: 40px;
+		background: url(../imagenes/bg.png);
+		background-size: cover;
+		background-position: center;
+	}
+	. content .contentHcl h2 
+	{
+		font-size: 1.3em;
+	}
+	. content .contentHcl p 
+	{
+		font-size: 0.7em;
+		background-size: cover;
+		background-position: center;
+		font-weight: 150;
+		margin: 15px 0;
+	}
+	header .navigation
+	{
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: #000;
+		z-index: 8;
+		display: none;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+	}
+	header .navigation.active
+	{
+		display: flex;
+	}
+	header .navigation li a
+	{
+		font-size: 24px;
+		margin: 10px 0;
+	}
+
+
+	@media only screen and (max-width: 980px) {
 	header
 	{
 		padding: 15px 40px;
@@ -137,7 +187,7 @@ header .navigation li a:hover
 	}
 	. content .contentHcl h2 
 	{
-		font-size: 2em;
+		font-size: 1em;
 	}
 	. content .contentHcl p 
 	{
@@ -159,9 +209,76 @@ header .navigation li a:hover
 		align-items: center;
 		flex-direction: column;
 	}
-		.header .navigation.active
+	header .navigation.active
 	{
 		display: flex;
+	}
+	header .navigation li a
+	{
+		font-size: 24px;
+		margin: 10px 0;
+	}
+	.toggleMenu
+	{
+		position: relative;
+		width: 30px;
+		height: 30px;
+		background: url(../imagenes/menu.png);
+		background-position: center;
+		background-size: 30px;
+		background-repeat: no-repeat;
+		cursor: pointer;
+		z-index: 11;
+	}
+	.toggleMenu.active
+	{
+		background: url(../imagenes/close.png);
+		background-position: center;
+		background-size: 26px;
+		background-repeat: no-repeat;
+	}
+
+
+	@media only screen and (max-width: 380px) {
+	header
+	{
+		padding: 15px 40px;
+		font-size: 12px;
+	}
+	section
+	{
+		padding: 40px;
+		background: url(../imagenes/bg2.png);
+		background-size: cover;
+		background-position: center;
+	}
+	. content .contentHcl h2 
+	{
+		font-size: 0.6em;
+	}
+	. content .contentHcl p 
+	{
+		font-size: 0.6em;
+		background-size: cover;
+		background-position: center;
+	}
+	header .navigation
+	{
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: #000;
+		z-index: 10;
+		display: none;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+	}
+	header .navigation.active
+	{
+		display: NONE;
 	}
 	header .navigation li a
 	{
