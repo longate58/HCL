@@ -35,6 +35,18 @@ header
 	align-items: center;
 }
 
+header .logo
+{
+	position: relative;
+	font-size: 2em;
+	color: #fff;
+	text-transform: uppercase;
+	font-weight: 700;
+	text-decoration: none;
+	letter-spacing: 1px;
+
+}
+
 header .navigation
 {
 	position: relative;
@@ -76,7 +88,7 @@ header .navigation li a:hover
 	font-size: 1.1em;
 	color: #fff;
 	font-weight: 200;
-	margin: 15px 0;
+	margin: 20px 0;
 }
 
 .content .contentHcl a
@@ -93,7 +105,7 @@ header .navigation li a:hover
 .redes
 {
 	position: absolute;
-	bottom: 10px;
+	bottom: 50px;
 	display: flex;
 }
 
@@ -102,6 +114,7 @@ header .navigation li a:hover
 	list-style: none;
 	display: flex;
 	justify-content: center;
+	align-items: center;
 }
 
 .redes li a
@@ -109,74 +122,15 @@ header .navigation li a:hover
 	position: relative;
 	display: inline-block;
 	margin-right: 20px;
-	filter: invert(1%);
 	transform: scale(0.5);
 }
 
-.redes h2
+
+@media (max-width: 991px) 
 {
-	font-size: 1.5em;
-	color: #fff;
-	line-height: 1em;
-}
-
-
-/*              Viewport less then or equal to 1130px            */
-@media only screen and (max-width: 1130px) {
 	header
 	{
 		padding: 15px 40px;
-		font-size: 12px;
-	}
-	section
-	{
-		padding: 40px;
-		background: url(../imagenes/bg.png);
-		background-size: cover;
-		background-position: center;
-	}
-	. content .contentHcl h2 
-	{
-		font-size: 1.3em;
-	}
-	. content .contentHcl p 
-	{
-		font-size: 0.7em;
-		background-size: cover;
-		background-position: center;
-		font-weight: 150;
-		margin: 15px 0;
-	}
-	header .navigation
-	{
-		position: fixed;
-		top: 0;
-		left: 0;
-		right: 0;
-		bottom: 0;
-		background: #000;
-		z-index: 8;
-		display: none;
-		justify-content: center;
-		align-items: center;
-		flex-direction: column;
-	}
-	header .navigation.active
-	{
-		display: flex;
-	}
-	header .navigation li a
-	{
-		font-size: 24px;
-		margin: 10px 0;
-	}
-
-
-	@media only screen and (max-width: 980px) {
-	header
-	{
-		padding: 15px 40px;
-		font-size: 12px;
 	}
 	section
 	{
@@ -187,13 +141,11 @@ header .navigation li a:hover
 	}
 	. content .contentHcl h2 
 	{
-		font-size: 1em;
+		font-size: 2.5em;
 	}
 	. content .contentHcl p 
 	{
 		font-size: 1em;
-		background-size: cover;
-		background-position: center;
 	}
 	header .navigation
 	{
@@ -212,73 +164,6 @@ header .navigation li a:hover
 	header .navigation.active
 	{
 		display: flex;
-	}
-	header .navigation li a
-	{
-		font-size: 24px;
-		margin: 10px 0;
-	}
-	.toggleMenu
-	{
-		position: relative;
-		width: 30px;
-		height: 30px;
-		background: url(../imagenes/menu.png);
-		background-position: center;
-		background-size: 30px;
-		background-repeat: no-repeat;
-		cursor: pointer;
-		z-index: 11;
-	}
-	.toggleMenu.active
-	{
-		background: url(../imagenes/close.png);
-		background-position: center;
-		background-size: 26px;
-		background-repeat: no-repeat;
-	}
-
-
-	@media only screen and (max-width: 380px) {
-	header
-	{
-		padding: 15px 40px;
-		font-size: 12px;
-	}
-	section
-	{
-		padding: 40px;
-		background: url(../imagenes/bg2.png);
-		background-size: cover;
-		background-position: center;
-	}
-	. content .contentHcl h2 
-	{
-		font-size: 0.6em;
-	}
-	. content .contentHcl p 
-	{
-		font-size: 0.6em;
-		background-size: cover;
-		background-position: center;
-	}
-	header .navigation
-	{
-		position: fixed;
-		top: 0;
-		left: 0;
-		right: 0;
-		bottom: 0;
-		background: #000;
-		z-index: 10;
-		display: none;
-		justify-content: center;
-		align-items: center;
-		flex-direction: column;
-	}
-	header .navigation.active
-	{
-		display: NONE;
 	}
 	header .navigation li a
 	{
