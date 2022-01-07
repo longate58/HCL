@@ -84,13 +84,15 @@ header ul li a
 
 .content .contentHcl h2 span
 {
-	color: #84A2D8;
+	color: #017143;
 	font-size: 0.8em;
+	font-weight: 900;
 }
 
 .content .contentHcl p
 {
-	color: #fff;
+	color: #999;
+	text-align: justify;
 }
 
 .content .contentHcl a
@@ -98,8 +100,8 @@ header ul li a
 	display: inline-block;
 	margin-top: 20px;
 	padding: 8px 20px;
-	background: #7283CC;
-	color: #111;
+	background: #017143;
+	color: #fff;
 	border-radius: 40px;
 	font-weight: 500;
 	letter-spacing: 1px;
@@ -121,7 +123,7 @@ header ul li a
 	max-width: 270px;
 }
 
-.tumb
+.thumb
 {
 	position: absolute;
 	left: 40%;
@@ -130,20 +132,20 @@ header ul li a
 	display: flex;
 }
 
-.tumb li
+.thumb li
 {
 	list-style: none;
 	display: inline-block;
-	margin: 20.50px;
+	margin: 0 20px; 
 	cursor: pointer;
 	transition: 0.5s;
 }
 
-.tumb li:hover
+.thumb li:hover
 {
 	transform: translateY(-25px);
 }
-.tumb li img
+.thumb li img
 {
 	max-width: 60px;
 }
@@ -172,6 +174,20 @@ header ul li a
 	margin: 5px 0;
 	transform: scale(0.6);
 }
+
+.circle
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #017143;
+	clip-path: circle(600px at right 800px);
+
+}
+
+
 
 @media (max-width: 991px)
 {
@@ -222,7 +238,7 @@ header ul li a
 	}
 	header ul li a:hover
 	{
-		color: #ed0224;
+		color: #ed0223;
 	}
 	.toggleMenu
 	{
@@ -235,6 +251,7 @@ header ul li a
 		background-repeat: no-repeat;
 		z-index: 2;
 		cursor: pointer;
+		display: list-item;
 	}
 	.toggleMenu.active
 	{
@@ -276,7 +293,7 @@ header ul li a
 	{
 		max-width: 150px;
 	}
-	.tumb li img
+	.thumb li img
 	{
 		max-width: 40px;
 	}
