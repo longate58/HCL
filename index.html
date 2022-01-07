@@ -5,46 +5,64 @@
 		<meta name="viewport" content="width=device-width, initial-scale)1.0">
 		<title>HCL Digital</title>
 		<link rel="stylesheet"  href="css/style.css">
-		
- 	</head>
+	</head>
 
 	<body>
-		<section>
+		<section class="sec">
 			<header>
-				<a href="#" class="logo">HCL Digital</a>
-				<div class="toggleMenu" onclick="toggleMenu();"></div>
+				<a href=""><img src="imagenes/logo.png" class="logo"></a>
+				<div class="toggleMenu" onclick="menuToggle()"></div>
 				<ul class="navigation">
-					<li><a href="#">Home</a></li>
-					<li><a href="#">Nosotros</a></li>
+					<li><a href="#">Inicio</a></li>
 					<li><a href="#">Productos</a></li>
+					<li><a href="#">Lo Nuevo</a></li>
 					<li><a href="#">Blog</a></li>
 					<li><a href="#">Contactos</a></li>
 				</ul>
 			</header>
+
 			<div class="content">
 				<div class="contentHcl">
-					<h2>Asesoría y Consultoría</br>
-					acorde a sus necesidades...</h2>
+					<h2>Asesoría y Consultoría<br><span>a sus necesidades...</span></h2>
 					<p>le ofrecemos conjuntamente con nuestro excelente equipo humano los valores establecidos en nuestra empresa HCL Digital, como una empresa visionaria, orientada a la superación, enfocada en el servicio de nuestro cliente y con mentalidad de líder referente a las categorías de informatica: Artes Interactivas Visuales, Diseño Gráfico, Posicionamiento SEO, Venta de Equipos y Georreferenciación de Documentos Cartográficos. </p>
-					<a href="#">Comenzar</a>
+					<a href="#">Ver los productos</a>
 				</div>
+
+				<div class="imgBox">
+					<img src="imagenes/pepsi/pepsi-zero-sugar.png" class="pepsi">
+				</div>		
 			</div>
 
-			<ul class="redes">              
+			<ul class="tumb">
+				<li><img src="imagenes/pepsi/pepsi-zero-sugar.png" onclick="imgSlider('pepsi-zero-sugar.png');changeBgColor('#e60c2c')"></li>
+				<li><img src="imagenes/pepsi/can-pepsi.png" onclick="imgSlider('can-pepsi.png');changeBgColor('#0062be')"></li>
+				<li><img src="imagenes/pepsi/Diet-Pepsi.png" onclick="imgSlider('Diet-Pepsi.png');changeBgColor('#1e1e1e')"></li>
+			</ul>
+			
+			<ul class="redes">
 				<li><a href="#"><img src="imagenes/facebook.png"></a></li>
 				<li><a href="#"><img src="imagenes/twitter.png"></a></li>
 				<li><a href="#"><img src="imagenes/instagram.png"></a></li>
+				
 			</ul>
 		</section>
+
 		<script type="text/javascript">
-			funtion toggleMenu() {
+			funtion imgSlider(anything) {
+				document.querySelector('.pepsi').scr = anything;				
+			}
+			funtion changeBgColor(color){
+				const sec = document.querySelector('.sec');
+				sec.style.background = color;
+			}
+			funtion menuToggle(){
 				const toggleMenu = document.querySelector('.toggleMenu');
-				const toggleMenu = document.querySelector('.navigation');
-				toggleMenu.classList.toggle('active');
-				navigation.classList.toggle('active');
+				const navigation = document.querySelector('.navigation');
+				toggleMenu.classList.toggle('.active')
+				navigation.classList.toggle('.active')
 			}
 		</script>
-
+		
 
 	
 	</body>
