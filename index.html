@@ -7,6 +7,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale)1.0">
 		<title>HCL Digital</title>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css" integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous">
 		<link rel="stylesheet"  href="css/style.css">
 	</head>
 	<!----FIN HEAD----------->
@@ -25,6 +26,10 @@
 					<li><a href="#">Blog</a></li>
 					<li><a href="#">Contactos</a></li>
 				</ul>
+				<div class="search">
+					<input type="text" placeholder="Buscar">
+					<i class="fa fa-search" aria-hidden="true"></i>
+				</div>
 			</header>
 			<!----FIN HEADER----------->
 
@@ -51,9 +56,9 @@
 
 			<!------THUMB--------->
 			<ul class="thumb">				
-				<li><img src="imagenes/pepsi/pepsi1.png" onclick="imgSlider('pepsi1.png')"></li>
-				<li><img src="imagenes/pepsi/pepsi2.png" onclick="imgSlider('pepsi2.png')"></li>
-				<li><img src="imagenes/pepsi/pepsi3.png" onclick="imgSlider('pepsi3.png')"></li>
+				<li><img src="imagenes/pepsi/pepsi1.png" onclick="imgSlider('imagenes/pepsi/pepsi1.png')"></li>
+				<li><img src="imagenes/pepsi/pepsi2.png" onclick="imgSlider('imagenes/pepsi/pepsi2.png')"></li>
+				<li><img src="imagenes/pepsi/pepsi3.png" onclick="imgSlider('imagenes/pepsi/pepsi3.png')"></li>
 			</ul>
 			<!----FIN THUMB----------->
 			
@@ -71,14 +76,12 @@
 
 		<!---SCRIPT------------>
 		<script type="text/javascript">
-			function imgSlider(anything) {
+			function imgSlider(anything) 
+			{
 				document.querySelector('.pepsi').scr = anything;				
 			}
-			function changeBgColor(color){
-				const sec = document.querySelector('.sec');
-				sec.style.background = color;
-			}
-			function menuToggle(){
+			function menuToggle()
+			{
 				const toggleMenu = document.querySelector('.toggleMenu');
 				const navigation = document.querySelector('.navigation');
 				toggleMenu.classList.toggle('.active')
