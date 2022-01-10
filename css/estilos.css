@@ -89,10 +89,10 @@ footer{
 
 .content-foo h4{
     color: #fff;
-    border-bottom: 3px solid #af20d3;
+    border-bottom: 3px solid #0dd532;
     padding-bottom: 5px;
     margin-bottom: 15px;
-     font-size: 18px;
+     font-size: 14px;
 }
 
 .content-foo p{
@@ -103,8 +103,8 @@ footer{
 .titulo-final{
     text-align: center;
     font-size: 14px;
-    margin: 20px 0 0 0;
-    color: #9e9797;
+
+    color: #fbf9f9;
 }
 
 @media screen and (max-width:900px){
