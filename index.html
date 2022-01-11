@@ -7,23 +7,62 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale)1.0">
 		<title>HCL Digital</title>
-		 <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"/>
+
+	    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"/>
     	<!-- Link Swiper's CSS -->
     	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
 		<link rel="stylesheet"  href="css/styles.css">
 
-		<!-- Demo styles -->
-	    <style>
+		 <style>
 	      html,
 	      body {
 	        position: relative;
 	        height: 100%;
 	      }
 
-	      
+	      body {
+	        background: #eee;
+	        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+	        font-size: 14px;
+	        color: #000;
+	        margin: 0;
+	        padding: 0;
+	      }
 
-	     
-	    </style>
+	      .swiper {
+	        width: 60%;
+	        height: 60%;
+	      }
+
+	      .swiper-slide {
+	        text-align: center;
+	        font-size: 18px;
+	        background: transparent;
+
+	        /* Center slide text vertically */
+	        display: -webkit-box;
+	        display: -ms-flexbox;
+	        display: -webkit-flex;
+	        display: flex;
+	        -webkit-box-pack: center;
+	        -ms-flex-pack: center;
+	        -webkit-justify-content: center;
+	        justify-content: center;
+	        -webkit-box-align: center;
+	        -ms-flex-align: center;
+	        -webkit-align-items: center;
+	        align-items: center;
+	      }
+
+	      .swiper-slide img {
+	        display: block;
+	        width: 40%;
+	        height: 40%;
+	        object-fit: cover;
+	      }
+    </style>
+
+
 	</head>
 	<!----FIN HEAD----------->
 	<body>
@@ -100,28 +139,28 @@
 		</section>
 		<!-----FIN SECTION---------->
 
-		<!---SWIPWE JS------------>
-	    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+		<!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
-	    <!-- Initialize Swiper -->
-	    <script>
-			var swiper = new Swiper(".mySwiper", {
-		        spaceBetween: 30,
-		        centeredSlides: true,
-		        autoplay: {
-		          delay: 4500,
-		          disableOnInteraction: false,
-		        },
-		        pagination: {
-		          el: ".swiper-pagination",
-		          clickable: true,
-		        },
-		        navigation: {
-		          nextEl: ".swiper-button-next",
-		          prevEl: ".swiper-button-prev",
-		        },
-      		});
-    	</script>
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        spaceBetween: 30,
+        centeredSlides: true,
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
 		<!----FIN SCRIPT----------->
 		
 	</body>
