@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<!----HAEAD----------->
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale)1.0">
+		<title>HCL Digital</title>
+
+	  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"/>
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" type="text/css" href="css/Control.MiniMap.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+		<link rel="stylesheet"  href="css/styles.css">
+
+		 <style>
+	      html,
+	      body {
+	        position: relative;
+	        height: 100%;
+	      }
+
+	      body {
+	        background: #eee;
+	        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+	        font-size: 14px;
+	        color: #000;
+	        margin: 0;
+	        padding: 0;
+	      }
+
+	      .swiper {
+	        width: 90%;
+	        height: 90%;
+	      }
+
+	      .swiper-slide {
+	        text-align: center;
+	        font-size: 18px;
+	        background: transparent;
+
+	        /* Center slide text vertically */
+	        display: -webkit-box;
+	        display: -ms-flexbox;
+	        display: -webkit-flex;
+	        display: flex;
+	        -webkit-box-pack: center;
+	        -ms-flex-pack: center;
+	        -webkit-justify-content: center;
+	        justify-content: center;
+	        -webkit-box-align: center;
+	        -ms-flex-align: center;
+	        -webkit-align-items: center;
+	        align-items: center;
+	      }
+
+	      .swiper-slide img {
+	        display: block;
+	        width: 90%;
+	        height: 90%;
+	        object-fit: cover;
+	      }
+    </style>
+
+
+	</head>
+	<!----FIN HEAD----------->
+	<body>
+		<!-----SECTION CIRCULO---------->
+		<section class="sec">
+			<div class="circulo"></div>
+
+			<!-----HEADER---------->
+			<header>
+				<a href=""><img src="imagenes/logo.png" class="logo"></a>
+				<!----<div class="toggleMenu" onclick="menuToggle();"></div>-->
+				<ul class="navigation">
+					<li><a href="#">Blog</a></li>
+					<li><a href="Carto.html">Lo Nuevo</a></li>
+					<li><a href="productos.html">Productos</a></li>
+					<li><a href="contacto.html">Contactos</a></li>
+				</ul>
+
+			</header>
+			<!----FIN HEADER----------->
+			
+			<!----CONTENT----------->
+			<div class="content">
+				<div class="contentHcl">
+					<h2>Asesoría y Consultoría<br><span>Cartografía Web SIG</span></h2>
+					<p>Nuestro equipo de trabajo participa en sus estrategias competitivas con base a las características de la sociedad y su relación con la geografía en donde se encuentra ubicada como componente importante en la mercadotecnia y la economía, algunas características del comportamiento de los consumidores están estrechamente relacionadas con el lugar donde viven, su clima, ubicación y su cultura.</p><br><br>
+					<h2><span>Diseño Digital</span></h2>
+					<p>Nuestro equipo de trabajo tiene la capacidad de desarrollar propuestas ingeniosas y autenticas en los entornos virtuales y en los medios tradicionales, las tendencias visuales en internet están en constante cambio, lo que demanda que el diseños permita satisfacer las necesidades de comunicación visual con un fin específico. </p><br><br>
+					<h2><span>Marketing Digital</span></h2>
+					<p>Con el apoyo del Geo analisis se puede mejorar la eficacia de sus acciones comerciales de cara a un nuevo segmento potencial, optimizándose así sus resultados de venta en el mercado. Aunado a las estrategias empresariales o personales se puede atraer nuevos negocios, crear relaciones y desarrollar una identidad de marca. Dentro de estas estrategias están el SEO, Inbound Marketing y el Marketing de Contenidos. </p>
+					<a href="presupuesto.html">presupuestos</a><br><br>
+				</div>
+			</div>
+
+			<!------SWIPER--------->
+			<div class="swiper mySwiper">
+			   	<div class="swiper-wrapper">
+			        <div class="swiper-slide"><img src="Polar/44.webp"></div>
+			        <div class="swiper-slide"><img src="Polar/45.webp"></div>
+			        <div class="swiper-slide"><img src="Polar/46.webp"></div>
+			        <div class="swiper-slide"><img src="Polar/48.webp"></div>
+			        <div class="swiper-slide"><img src="Polar/49.webp"></div>
+			        <div class="swiper-slide"><img src="Polar/50.webp"></div>
+			        <div class="swiper-slide"><img src="Polar/51.webp"></div>
+			   	</div>
+			    <div class="swiper-button-next"></div>
+			    <div class="swiper-button-prev"></div>
+			    <div class="swiper-pagination"></div>
+    		</div>
+			<!----FIN SWIPER----------->
+
+			<!------REDES--------->
+			<ul class="redes">
+				<li><a href="#"><img src="imagenes/facebook.png"></a></li>
+				<li><a href="https://twitter.com/digital_hcl"><img src="imagenes/twitter.png"></a></li>
+				<li><a href="https://www.instagram.com/hcl_digital/"><img src="imagenes/instagram.png"></a></li>	
+			</ul>
+			<!------FIN REDES--------->
+
+	
+			<!----FIN CONTENT----------->
+
+
+			
+			<!------REDES--------->
+			<ul class="redes">
+				<li><a href="#"><img src="imagenes/facebook.png"></a></li>
+				<li><a href="https://twitter.com/digital_hcl"><img src="imagenes/twitter.png"></a></li>
+				<li><a href="https://www.instagram.com/hcl_digital/"><img src="imagenes/instagram.png"></a></li>
+				
+			</ul>
+			<!------FIN REDES--------->
+
+		</section>
+		<!-----FIN SECTION---------->
+
+		<!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        spaceBetween: 30,
+        centeredSlides: true,
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
+		<!----FIN SCRIPT----------->
+		
+	</body>
+	<!-----FIN---------->
+</html>
