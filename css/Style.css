@@ -326,7 +326,14 @@ main .post-content .post-title a{
     font-family: var(--Anton);
     font-size: 1.5rem;
 }
-
+.cta{
+    display: inline-block;
+    text-decoration: none;
+    background-image: linear-gradient(45deg, #2a93dd 0%, #2279b6 99%, #175886 100%);
+    padding: 12px 15px;
+    border-radius: 5px;
+    color: #fff;
+}
 .site-content .post-content .post-title .post-btn{
     border-radius: 0;
     padding: .7rem 1.5rem;
