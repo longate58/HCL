@@ -123,7 +123,7 @@ function getColor(d){
 
 function style(feature){
     return {
-        fillColor: getColor(feature.properties.TOT_VIVIEN),
+        fillColor: getColor(feature.properties.TOT_VIVIEN,),
         weight: 2,
         opacity: 1,
         color: 'white',
@@ -131,6 +131,7 @@ function style(feature){
         fillOpacity: 0.4
     };
 }
+
 
 //------------------- AGregar interaccion del puntero con la capa para resaltar el objeto
 function highlightFeature(e) {
@@ -179,11 +180,15 @@ barriosJS = L.geoJson(barrios,{
 
 
 //-------------AGREGAR UN MARCADOR-----------------------------------------
+L.marker([10.4697198, -66.5188964]).addTo(map)
+    .bindPopup('Comuna <br> C-MIX-2021-05-0009.')
+    .openPopup();
+L.marker([10.4818170, -66.5222892]).addTo(map)
+    .bindPopup('Comuna <br> C-MIX-2021-05-0009.')
+    .openPopup();
 L.marker([10.4968300, -66.5304963]).addTo(map)
     .bindPopup('Comuna <br> C-MIX-2021-05-0009.')
     .openPopup();
-
-
  //l--------------ogo position: bottomright, topright, topleft, bottomleft
     var logo = L.control({position: 'topleft'});
     logo.onAdd = function(map){
