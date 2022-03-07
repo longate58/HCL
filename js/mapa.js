@@ -100,9 +100,9 @@ info.onAdd = function(map){
 
 //-------------------------- Agregar el metodo que actualiza el control segun el puntero vaya pasando
 info.update = function(props){
-    this._div.innerHTML = '<h4>Total Viviendas por Consejo Comunal</h4>' + 
+    this._div.innerHTML = '<h4>Total Viviendas</h4>' + 
                             (props ? '<b>' + props.BARRIO + '</b><br/>' + props.TOT_VIVIEN + ' viviendas</sup>'
-                            : 'Pase el puntero por un Consejo Comunal');
+                            : 'PASE EL PUNTERO POR LA POLGONAL');
 };
 
 info.addTo(map);
@@ -124,9 +124,9 @@ function getColor(d){
 function style(feature){
     return {
         fillColor: getColor(feature.properties.TOT_VIVIEN,),
-        weight: 2,
+        weight: 1,
         opacity: 1,
-        color: 'white',
+        color: 'grey',
         dashArray: '3',
         fillOpacity: 0.4
     };
