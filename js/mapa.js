@@ -1,5 +1,5 @@
 // Crear la variable mapa con coordenadas de centro y zoom
-let map = L.map('map').setView([10.4869, -66.5287], 14)
+let map = L.map('map').setView([10.4869, -66.5287], 13)
 
 // Agregar mapa base de OpenStreetMap
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{
@@ -63,14 +63,14 @@ var populationChangeLegend = L.control({position: 'bottomright'});
 populationLegend.onAdd = function (map) {
 var div = L.DomUtil.create('div', 'info legend');
     div.innerHTML +=
-    '<img src="assets/leyenda.png" alt="legend" width="234" height="234">';
+    '<img src="" alt="" width="" height="">';
 return div;
 };
 
 populationChangeLegend.onAdd = function (map) {
 var div = L.DomUtil.create('div', 'info legend');
     div.innerHTML +=
-    '<img src="change_leyenda.png" alt="legend" width="234" height="234">';
+    '<img src="" alt="" width="" height="">';
 return div;
 };
 
@@ -109,13 +109,13 @@ info.addTo(map);
 
 // Generar rangos de colores de acuerdo con el atributo o campo TOT_VIVIEN
 function getColor(d){
-    return  d > 900 ? '#0D5795' :
-            d > 750 ? '#137fd9' :
-            d > 600 ? '#009846' :
-            d > 450 ? '#A8E2B9' :
-            d > 250 ? '#E5E006' :
-            d > 100 ? '#FFB553' :
-            d > 0    ? '#FEFA46' :
+    return  d > 900 ? '#f2fb5c' :
+            d > 750 ? '#6290f6' :
+            d > 600 ? '#6290f6' :
+            d > 450 ? '87a9f7' :
+            d > 250 ? '#6290f6' :
+            d > 100 ? '#6290f6' :
+            d > 0    ? '#6290f6' :
                        '#0000FF';
 }
 
@@ -181,10 +181,10 @@ barriosJS = L.geoJson(barrios,{
 
 //-------------AGREGAR UN MARCADOR-----------------------------------------
 L.marker([10.4697198, -66.5188964]).addTo(map)
-    .bindPopup('Comuna <br> C-MIX-2021-05-0009.')
+    .bindPopup('Comuna <br> C-MIX-2018-11-0103.')
     .openPopup();
 L.marker([10.4818170, -66.5222892]).addTo(map)
-    .bindPopup('Comuna <br> C-MIX-2021-05-0009.')
+    .bindPopup('Comuna <br> C-RUR-2018-11-0054.')
     .openPopup();
 L.marker([10.4968300, -66.5304963]).addTo(map)
     .bindPopup('Comuna <br> C-MIX-2021-05-0009.')
