@@ -12,7 +12,6 @@ document.getElementById('select-location').addEventListener('change', function(e
     map.flyTo(coords,18);
 })
 
-
 // Agregar mapa base para el Mini Mapa
 var carto_light = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {attribution: '©OpenStreetMap, ©CartoDB',subdomains: 'abcd',maxZoom: 24});
 
@@ -67,12 +66,7 @@ var div = L.DomUtil.create('div', 'info legend');
 return div;
 };
 
-populationChangeLegend.onAdd = function (map) {
-var div = L.DomUtil.create('div', 'info legend');
-    div.innerHTML +=
-    '<img src="" alt="" width="" height="">';
-return div;
-};
+
 
 // Add this one (only) for now, as the Population layer is on by default
 populationLegend.addTo(map);
@@ -126,7 +120,7 @@ function style(feature){
         fillColor: getColor(feature.properties.TOT_VIVIEN,),
         weight: 1,
         opacity: 1,
-        color: 'grey',
+        color: 'BLUE',
         dashArray: '3',
         fillOpacity: 0.4
     };
@@ -181,15 +175,18 @@ barriosJS = L.geoJson(barrios,{
 
 //-------------AGREGAR UN MARCADOR-----------------------------------------
 L.marker([10.4697198, -66.5188964]).addTo(map)
-    .bindPopup('Comuna <br> C-MIX-2018-11-0103.')
+    .bindPopup('Poligonal <br> C-MIX-2018-11-0103.')
     .openPopup();
-L.marker([10.4818170, -66.5222892]).addTo(map)
-    .bindPopup('Comuna <br> C-RUR-2018-11-0054.')
+L.marker([10.4892115, -66.5154384]).addTo(map)
+    .bindPopup('Poligonal <br> C-RUR-2018-11-0054.')
     .openPopup();
 L.marker([10.4968300, -66.5304963]).addTo(map)
-    .bindPopup('Comuna <br> C-MIX-2021-05-0009.')
+    .bindPopup('Poligonal <br> C-MIX-2021-05-0009.')
     .openPopup();
- //l--------------ogo position: bottomright, topright, topleft, bottomleft
+    L.marker([10.4597306, -66.4990616]).addTo(map)
+    .bindPopup('Poligonal <br> C-RUR-2018-11-0054.')
+    .openPopup();
+ //l--------------logo position: bottomright, topright, topleft, bottomleft
     var logo = L.control({position: 'topleft'});
     logo.onAdd = function(map){
         var div = L.DomUtil.create('div', 'myclass');
@@ -200,4 +197,4 @@ L.marker([10.4968300, -66.5304963]).addTo(map)
 
 
 // Agregar atribucion
-map.attributionControl.addAttribution('Municipio Zamora, Miranda &copy; HCL Digital.EPS');
+map.attributionControl.addAttribution('Municipio Zamora, Miranda &copy; HCL Digital.UPF');
