@@ -433,13 +433,13 @@ td, th{ /* ----- hacer lineas internas ---*/
 
 footer.footer{
     height: 100%;
-    background: var(--bg-color);
+    background: #01080f;
     position: relative;
 }
 
 footer.footer .container{
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
 }
 
 footer.footer .container > div{
@@ -451,43 +451,17 @@ footer.footer .container > div{
 footer.footer .container h2{
     color: var(--white);
 }
-
 footer.footer .container p{
     color: var(--white);
 }
-
-
-footer.footer .newsletter .form-element{
-    background: black;
-    display: inline-block;
+footer.footer .container h3{
+    color: var(--white);
 }
 
-footer.footer .newsletter .form-element input{
-    padding: .5rem .7rem;
-    border: none;
-    background: transparent;
-    color: white;
-    font-family: var(--Josefin);
-    font-size: 1rem;
-    width: 74%;
-}
-
-footer.footer .newsletter .form-element span{
-    background: var(--sky);
-    padding: .5rem .7rem;
-    cursor: pointer;
-}
-
-footer.footer .instagram div > img{
-    display: inline-block;
-    width: 25%;
-    height: 50%;
-    margin: .3rem .4rem;
-}
 
 footer.footer .follow div i{
     color: var(--white);
-    padding: 0 .4rem;
+    padding: 0 .8rem;
 }
 
 footer.footer .rights{
@@ -499,8 +473,14 @@ footer.footer .rights h4 a{
     color: var(--white);
 }
 
+footer.footer .move-up{
+    position: absolute;
+    right: 6%;
+    top: 50%;
+}
+
 footer.footer .move-up span{
-    color: var(--midnight);
+    color: #eddcc7;
 }
 
 footer.footer .move-up span:hover{
