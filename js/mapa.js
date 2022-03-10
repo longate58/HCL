@@ -1,5 +1,5 @@
 // Crear la variable mapa con coordenadas de centro y zoom
-let map = L.map('map').setView([10.4869, -66.5287], 13)
+let map = L.map('map').setView([10.4739, -66.5087], 13)
 
 // Agregar mapa base de OpenStreetMap
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{
@@ -195,10 +195,12 @@ L.marker([10.4968300, -66.5304963]).addTo(map)
     var logo = L.control({position: 'topleft'});
     logo.onAdd = function(map){
         var div = L.DomUtil.create('div', 'myclass');
-        div.innerHTML= "<img src='assets/logo.png'/ width='110' height='60'  >";
+        div.innerHTML= "<img src='../assets/logo.png'/ width='110' height='60'  >";
         return div;
     }
     logo.addTo(map);
+
+
 
 
 // Agregar atribucion
