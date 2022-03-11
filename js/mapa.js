@@ -1,7 +1,13 @@
-// Crear la variable mapa con coordenadas de centro y zoom
+//---------- Crear la variable mapa con coordenadas de centro y zoom
 let map = L.map('map').setView([10.4739, -66.5087], 13)
 
-// Agregar mapa base de OpenStreetMap
+
+
+//---------- Agregar mapa base de OpenStreetMap
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+}).addTo(map);
+
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(map);
@@ -12,10 +18,14 @@ document.getElementById('select-location').addEventListener('change', function(e
     map.flyTo(coords,18);
 })
 
-// Agregar mapa base para el Mini Mapa
+
+
+//---------- Agregar mapa base para el Mini Mapa
 var carto_light = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {attribution: '©OpenStreetMap, ©CartoDB',subdomains: 'abcd',maxZoom: 24});
 
-// Agregar plugin MiniMap
+
+
+//---------- Agregar plugin MiniMap
 var minimap = new L.Control.MiniMap(carto_light,
     {
         toggleDisplay: true,
@@ -23,7 +33,9 @@ var minimap = new L.Control.MiniMap(carto_light,
         position: "bottomleft"
     }).addTo(map);
 
-// Agregar escala
+
+
+//---------- Agregar escala ----------
  new L.control.scale({imperial: false}).addTo(map);
 
 // Configurar PopUp
@@ -34,7 +46,10 @@ function popup(feature,layer){
 }
 
 
-// Agregar coordenadas para dibujar una polilinea
+
+
+
+//---------- Agregar coordenadas para dibujar una polilinea
 var coord_camino = [
     [10.488138000, -66.96250400], [10.488002800, -66.926213900], [10.487768800, -66.926210400], [10.487669100, -66.926311800], [10.487616900, -66.926451300]
 ];
@@ -42,6 +57,8 @@ var coord_camino = [
 var camino = L.polyline(coord_camino, {
     color: 'red'
 }).addTo(map);
+
+
 
 //----------------------- Agregar un marcador
 var marker_cerro = L.circleMarker(L.latLng(10.494369700, -66.528557900), {
@@ -55,47 +72,20 @@ var marker_cerro = L.circleMarker(L.latLng(10.494369700, -66.528557900), {
 
 
 
-//------------------------------ Agregar la leyenda
-var populationLegend = L.control({position: 'bottomright'});
-var populationChangeLegend = L.control({position: 'bottomright'});
 
-populationLegend.onAdd = function (map) {
-var div = L.DomUtil.create('div', 'info legend');
-    div.innerHTML +=
-    '<img src="assets/leyenda.png" alt="legend" width="234" height="234">';
-return div;
-};
-
-populationChangeLegend.onAdd = function (map) {
-var div = L.DomUtil.create('div', 'info legend');
-    div.innerHTML +=
-    '<img src="change_leyenda.png" alt="legend" width="234" height="234">';
-return div;
-};
-
-// Add this one (only) for now, as the Population layer is on by default
-populationLegend.addTo(map);
-
-map.on('overlayadd', function (eventLayer) {
-    // Switch to the Population legend...
-    if (eventLayer.name === 'Population') {
-        this.removeControl(populationChangeLegend);
-        populationLegend.addTo(this);
-    } else { // Or switch to the Population Change legend...
-        this.removeControl(populationLegend);
-        populationChangeLegend.addTo(this);
-    }
-});
 //------------------------ Agregar control para ver los datos al pasar el puntero
 
 var info = L.control();
 
-// Crear un div con una clase info
+
+
+//---------- Crear un div con una clase info
 info.onAdd = function(map){
     this._div = L.DomUtil.create('div','info');
     this.update();
     return this._div;
 };
+
 
 //-------------------------- Agregar el metodo que actualiza el control segun el puntero vaya pasando
 info.update = function(props){
@@ -106,7 +96,8 @@ info.update = function(props){
 
 info.addTo(map);
 
-// Generar rangos de colores de acuerdo con el atributo o campo TOT_VIVIEN
+
+//---------- Generar rangos de colores de acuerdo con el atributo o campo TOT_VIVIEN
 function getColor(d){
     return  d > 900 ? '#f2fb5c' :
             d > 750 ? '#6290f6' :
@@ -146,6 +137,9 @@ function highlightFeature(e) {
     info.update(layer.feature.properties);
 }
 
+
+
+
 // -----------------Configurar los cambios de resaltado y zoom de la capa
 
 var barriosJS;
@@ -169,7 +163,7 @@ function onEachFeature(feature, layer){
 
 
 
-// Agregar capa en formato GeoJson
+//---------- Agregar capa en formato GeoJson----------
 barriosJS = L.geoJson(barrios,{
     style: style,
     onEachFeature: onEachFeature
@@ -191,14 +185,19 @@ L.marker([10.4968300, -66.5304963]).addTo(map)
     L.marker([10.4597306, -66.4990616]).addTo(map)
     .bindPopup('Poligonal <br> C-RUR-2018-11-0054.')
     .openPopup();
+ 
+
+
  //l--------------logo position: bottomright, topright, topleft, bottomleft
     var logo = L.control({position: 'topleft'});
     logo.onAdd = function(map){
         var div = L.DomUtil.create('div', 'myclass');
-        div.innerHTML= "<img src='../assets/logo.png'/ width='110' height='60'  >";
+        div.innerHTML= "<img src='assets/logo.png'/ width='110' height='60'  >";
         return div;
     }
     logo.addTo(map);
+
+
 
 
 
