@@ -47,11 +47,9 @@ function popup(feature,layer){
 
 
 
-
-
 //---------- Agregar coordenadas para dibujar una polilinea
 var coord_camino = [
-    [10.488138000, -66.96250400], [10.488002800, -66.926213900], [10.487768800, -66.926210400], [10.487669100, -66.926311800], [10.487616900, -66.926451300]
+    [10.488138000, -66.46250400], [10.488002800, -66.426213900], [10.487768800, -66.426210400], [10.487669100, -66.426311800], [10.487616900, -66.426451300]
 ];
 
 var camino = L.polyline(coord_camino, {
@@ -60,9 +58,11 @@ var camino = L.polyline(coord_camino, {
 
 
 
+
+
 //----------------------- Agregar un marcador
-var marker_cerro = L.circleMarker(L.latLng(10.494369700, -66.528557900), {
-    radius: 6,
+var marker_cerro = L.circleMarker(L.latLng(10.502369700, -66.518557900), {
+    radius: 16,
     fillColor: "#ff0000",
     color: "blue",
     weight: 2,
