@@ -118,7 +118,7 @@ function style(feature){
         opacity: 1,
         color: 'BLUE',
         dashArray: '3',
-        fillOpacity: 0.4
+        fillOpacity: 0.15
     };
 }
 
