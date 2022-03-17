@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+            <title>HCL Digital Web SIG</title>
+            <script src="js/jquery-3.1.0.min.js"></script>
+    <script src="js/main1.js"></script>
+
+            <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+              integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+              crossorigin=""/>
+
+            <link rel="stylesheet" type="text/css" href="css/Control.MiniMap.min.css">
+            <link rel="stylesheet" type="text/css" href="css/leaflet.legend.css">
+            <link rel="stylesheet" type="text/css" href="css/leaflet-search.css">
+            <link rel="stylesheet" type="text/css" href="css/leaflet-search.mobile.css">
+            <link rel="stylesheet" href="css/Proyectos.css">
+            <link rel="stylesheet" type="text/css" href="css/mapa.css"> 
+
+
+            <link rel="stylesheet" href="css/estilos44.css">
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="stylesheet" href="css/Style.css">
+
+
+            <!----Fin CSS ---->
+
+
+            <!----Inicio JS ---->
+            <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+              integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+              crossorigin=""></script>         
+
+            <!----FINJS ---->
+
+
+        </head>
+
+        <body>
+             <!---ENCABEZADO DE LA PAGINA --->
+            <header>
+        <div class="slideshow">
+            <ul class="slider">
+                <li>
+                    <img src="assets/img/10.jpg" alt="">
+                    <section class="caption">
+                        <h5>GEOMERCADEO</h5>
+                        <p></p>
+                    </section>
+                </li>
+                <li>
+                    <img src="assets/img/11.jpg" alt="">
+                    <section class="caption">
+                        <h1>GEOESTRATEGIA</h1>
+                        <p></p>
+                    </section>
+                </li>
+                <li>
+                    <img src="assets/img/12.jpg" alt="">
+                    <section class="caption">
+                        <h1>GEOPLANIFICACIÓN</h1>
+                        <p></p>
+                    </section>
+                </li>
+                <li>
+                    <img src="assets/img/13.jpg" alt="">
+                    <section class="caption">
+                        <h1>OMNICANALIDAD / MULTICANALIDAD</h1>
+                        <p></p>
+                    </section>
+                </li>
+            </ul>
+
+            <ol class="pagination">
+                
+            </ol>
+        
+            <div class="left">
+                <span class="fa fa-chevron-left"></span>
+            </div>
+
+            <div class="right">
+                <span class="fa fa-chevron-right"></span>
+            </div>
+        </div>
+    </header>
+
+
+
+
+
+
+
+
+
+
+       
+
+        <!--- FIN ENCABEZADO DE LA PAGINA --->  
+        
+        <!---CONTENIDO PRINCIPAL --->
+                <main>
+                <!---INICIO OPCIONES DEL MAPA ---> 
+                    <select name="select-location" id="select-location">
+                        <option value="-1">Seleccione un lugar</option>   
+                        <option value="10.491669700, -66.528557900">CAPRI Y MONACO</option>
+                        <option value="10.490442200, -66.535409700">COLINAS DE VALLE ARRIBA</option>
+                        <option value="10.476947500, -66.52480500">COLINAS DE VALLE CIELO</option>
+                        <option value="10.482387600, -66.532264900">CONJUNTO LONDRES</option>
+                        <option value="10.476791600, -66.531925700">GIRAZOLES DE ZAMORA</option>
+                        <option value="10.474076000, -66.530925900">FLORES DE VALLE ARRIBA</option>
+                        <option value="10.474915700, -66.528333600">LOMAS DE VALLE CIELO</option>
+                        <option value="10.487345500, -66.525346200">TRIUNFADORES VALLE BONITO</option>
+                        <option value="10.476423900, -66.527149400">VALLE CIELO</option>
+                        <option value="10.483971800, -66.537229600">VALLE ENCANTADO</option>
+                        <option value="10.478591200, -66.529139600">VALLE ESPERANZA</option>
+                        <option value="10.484830000, -66.530496300">VALLE GINEBRA</option>  
+                    </select>
+                <!---INICIO JAVA SCRIP MAPA ---> 
+                    <div id="map"></div>
+
+                    <script src="js/Control.MiniMap.min.js"></script>   
+                    <script src="js/leaflet.legend.js"></script> 
+                    <script src="js/leaflet-search.js"></script>
+                    <script src="js/leaflet-search-geocoder.js"></script>
+                    <script src="js/barrios.js"></script>
+                    <script src="js/mapa.js"></script>
+
+                    
+                <!---FIN JAVA SCRIP MAPA ---> 
+
+                <section class="container">
+                    <div class="site-content">
+                    <div class="posts">
+                         <hr>
+                        <div class="post-content" data-aos="zoom-in" data-aos-delay="200">
+
+                            <div class="post-title">
+                                <p>Los asesores de HCL Digital, son sus aliados estratégico para implementar "GEOESTRATEGIA, GEOMERCADEO Y GEOPLANIFICACIÓN", con lo cual se generan mapas online los cuales reflejan: comportamiento de los consumidores, ubicación, clima, cultura, puntos de venta, sucursales, competencia y otros factores de relevancia con la finalidad de generar estrategias competitivas sustentada en la mercadotecnia y la economía... <br><br>HCL Digital ofrece asesoría a su equipo de trabajo para realizar los análisis de mercadotecnia sujeto a un "Perfil Geográfico", los cuales se pueden realizar a diversas escalas geograficas: regional, país, estado, municipio, municipio, comunas, consejo comunal, pueblos, cuadrante, manzanas, local, micro local, puntos de venta, sucursales, competencia y otros factores de relevancia los cuales pueden revelar el comportamiento de los consumidores, es decir, a partir de ciertas características sociodemográficas, económicas, de es posible crear indicadores los cuales permitan identificar aquellas zonas geográficas que cumplan dicho perfil de consumo.<br><br>HCL Digital ofrece alternativas en sus Análisis de Origen - Destino con la finalidad de mostrar en cuanto a la movilidad y el comportamiento espacial de los mercados la ruta mas efectiva para enfocar a su Fuerza de Ventas al saber cómo, a dónde, en que volumen y el medio en el que se desplazan las personas factor de inminente importancia al estudiar la mejor forma de accionar en el punto de venta, acordea a las decisiones comerciales referidas a la distribución, ventas y mercadeo logren una sinergia operativa que oriente los esfuerzos de la organización.<br><br>HCL Digital como su socio estrategico le ofrece asesoría al elaborar conjuntamente con su equipo de trabajo las estrategias de marketing con mayor repercusión en sus clientes, sustentado en la digitalización de sus datos, los cuales permiten determinar las estrategias de OMNICANALIDAD y/o la MULTICANALIDAD que responden a los constantes cambios en la forma de interacción de los usuarios con las empresas, sustentada en la información y soluciones acordea a las necesidades de los clientes, garantizando que esa experiencia de usuario sea cada vez más precisa y satisfactoria. </p>
+                            </div>
+                        </div>                    
+                    </div>
+
+                    <!---CONTENIDO INDIRECTO AL MAIN --->
+                    <aside class="sidebar">
+                        <div class="popular-post">
+                            <hr>
+                            <h2></h2>
+                            <div><img loading="lazy" src="assets/Blog-post/315.webp" class="img" alt="blog1"></div>
+                        </div><hr>
+                        <div class="popular-post">
+                            <div><img loading="lazy" src="assets/logo.png" class="img" alt="blog1"></div>
+                        </div>
+                    
+                        <div class="post-title"> <a href="index.html"></a></div>
+                        <nav><a href="index.html"><img loading="lazy" src="assets/home.webp" alt="" ></a></nav>
+                    </aside>
+                    </div>
+                </section>          
+
+                </main>
+        <!---FIN CONTENIDO PRINCIPAL --->
+
+        <!---PIE DE PAGINA --->
+            <footer class="footer">
+                <div class="container">
+                    <div class="about-us" data-aos="fade-right" data-aos-delay="200">
+                        <h2>MISIÓN HCL Digital:</h2>
+                        <p> Llevar a cabo servicios de asesoría y consultoría de alta calidad para aquellos clientes que aspiran a la mejor optimización de sus organizaciones: mediante la competitividad en el ámbito empresarial y la modernización administrativa.<br><br> Desde la perspectiva de una mejora continua, innovadora, dinámica, y con calidad en la gestión especializada; por todo ello conseguimos en todo momento la SATISFACCIÓN DE NUESTROS CLIENTES.</p>
+                    </div>
+                    <div class="follow" data-aos="fade-left" data-aos-delay="200">
+                        <h2>Siguenos</h2>
+                        <p>Nuestras redes sociales</p>
+                        <div>
+                            <a href="https://twitter.com/digital_hcl"><i class="fab fa-twitter"></i></a>
+                            <a href="https://www.instagram.com/hcl_digital/"><i class="fab fa-instagram"></i></a>
+                            <a href="https://www.facebook.com/22HCLDigital><i class="fab fa-facebook-f"></i></a>
+                            <i class="fab fa-youtube"></i>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="rights flex-row">
+                    <h4 class="text-white">
+                        Copyright ©2022 All rights reserved | made by HCL Digital, UPF
+                   
+                    </h4>
+                </div>
+            </footer>                   
+            <!---FIN PIE DE PAGINA --->
+
+
+
+            <!---libreria del carousel --->
+            <script src="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.js"></script>
+            <!---libreria del carousel --->
+            <script src="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.js"></script>
+            <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+            <script src="js/app.js"></script>   
+
+
+        </body>
+</html>
