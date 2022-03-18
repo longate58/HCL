@@ -4,8 +4,15 @@
 
 html, body{
     margin: 0%;
+    padding: 0;
     box-sizing: border-box;
     overflow-x: hidden;
+    font-family: 'Roboto-Thin', sans-serif;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: 'Roboto-Thin', sans-serif;
+
 }
 
 :root{
@@ -22,16 +29,25 @@ html, body{
     --sky: linear-gradient(120deg, #3D89CF 0%, #066dcb 100%); /* color de fondo anuncios */
 
     /*      theme font-family   */
-    --Abel: 'Abel', cursive;
-    --Anton: 'Anton', cursive;
-    --Josefin : 'Josefin', cursive;
-    --Lexend: 'Lexend', cursive;
-    --Livvic : 'Livvic', cursive;
+    --Abel: 'Roboto-Thin', cursive;
+    --Anton: 'Roboto-Thin', cursive;
+    --Josefin : 'Roboto-Thin', cursive;
+    --Lexend: 'Roboto-Thin'cursive;
+    --Livvic : 'Roboto-Thin', cursive;
 }
 
 
 /* ---------------- Global Classes ---------------*/
 
+
+/* ----------------  ---------------*/
+
+ul,ol{
+    list-style: none;
+}
+
+
+/* ----------------  ---------------*/
 a{
     text-decoration: none;
     color: var(--textgray);
@@ -86,7 +102,7 @@ p{
 
 /* ------x------- Global Classes -------x-------*/
 
-/* --------------- navbar ----------------- */
+/* --------------- navbar - Navigation ---------------- */
 
 .nav{
     background: #066dcb; /* color de fondo encabezado */
@@ -138,7 +154,7 @@ p{
     font-size: 1.1rem;
     position: relative;
     font-family: var(--Abel);
-    font-size: 1.1rem;
+    font-size: 1.4rem;
     color: var(--text-white);
 
 }
@@ -156,7 +172,8 @@ p{
     padding: 1rem 0;
     display: block;
     font-family: var(--Lexend);
-    font-size: 1.6rem;
+    position: relative;
+
 }
 
 .nav .social{
@@ -171,22 +188,28 @@ p{
     color: #FFFFFF;
 }
 
-/* -------x------- navbar ---------x------- */
+/* -------x------- navbar - Navigation ---------x------- */
 
 
 /* ----------------- Main Content----------- */
 
 /* --------------- Site title ---------------- */
+main{
+   
+    padding: 2.5rem .5rem;
+
+}
+
 main .site-title{
     background: url('../assets//Blog-post/fondo_pantalla.jpg');
     background-size: cover;
-    height: 110vh;
+    height: 70vh;
     display: flex;
     justify-content: center;
 }
 
 main .site-title .site-background{
-    padding-top: 5rem;
+    padding-top: 2rem;
     text-align: center;
     color: var(--white);
 }
@@ -211,16 +234,15 @@ main .site-title .btn:hover{
 /* --------------- Blog Carousel ------------ */
 
 main .blog{
-    /* ---background: url('../assets/Abract01.png');--- */
     background-repeat: no-repeat;
     background-position: right;
     height: 100vh;
     width: 100%;
-    background-size: 65%;
+    background-size: 45%;
 }
 
 main .blog .blog-post{
-    padding-top: 6rem;
+    padding-top: 2rem;
 }
 
 main .blog-post .blog-content{
@@ -234,6 +256,12 @@ main .blog-post .blog-content{
 
 main .blog-content .blog-title{
     padding: 2rem 0;
+    font-family: var(--Lexend);
+}
+
+main .blog-content .blog-title h1, h3, h4{
+    padding: 2rem 0;
+    font-family: var(--Lexend);
 }
 
 main .blog-content .btn-blog{
@@ -291,10 +319,13 @@ main .site-content .post-content > .post-image, .post-title{
     position: relative;
 }
 
-main .site-content .post-content > .post-image, .post-title > a{
+main .site-content .post-content > .post-image, .post-title > a, p{
     padding: 1rem 2rem;
     position: relative;
+    font-family: 'Roboto-Thin', sans-serif;
+    font-size: 1.5rem;
 }
+
 main .site-content .post-content > .post-image .post-info{
     background: var(--sky);
     padding: 1rem;
@@ -438,6 +469,103 @@ main .post-content .post-title a{
     color: var(--white);
 }
 
+.slideshow{
+    width: 100%;
+    position: relative;
+}
+
+.slider li, ul{
+    width: 100%;
+}
+
+.slider li{
+    overflow: hidden;
+}
+
+.slider li img{
+    width: 100%;
+}
+
+.slider .caption{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    padding: 15px 50px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    color: #fff;
+    z-index: 1;
+}
+
+.slider .caption h5{
+    font-size: 50px;
+}
+
+.slider .caption p{
+    color: #F3F3F3;
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+.pagination{
+    position: absolute;
+    top: 102%;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+}
+
+.pagination li{
+    font-size: 20px;
+    margin: 2px 5px;
+    color: #858585;
+    cursor: pointer;
+}
+
+.left, .right{
+    position: absolute;
+    top: 0;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+
+    color: #fff;
+    font-size: 35px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.left{
+    left: 10px;
+}
+
+.right{
+    right: 10px;
+}
+
+.sidebar .popular-post img{
+    justify-content: center;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 /* -------x------- Sidebar -----------x----------- */
 
@@ -460,7 +588,7 @@ footer.footer .container{
 footer.footer .container > div{
     flex-grow: 1;
     flex-basis: 0;
-    padding: 3rem .9rem;
+    padding: 1rem .9rem;
 }
 
 footer.footer .container h2{
@@ -468,6 +596,7 @@ footer.footer .container h2{
 }
 footer.footer .container p{
     color: var(--white);
+    font-size: 1.1rem;
 }
 footer.footer .container h3{
     color: var(--white);
@@ -476,16 +605,19 @@ footer.footer .container h3{
 
 footer.footer .follow div i{
     color: var(--white);
-    padding: 0 .8rem;
+    padding: 0.8rem;
 }
 
-footer.footer .rights{
+footer.rights .flex-row{
     justify-content: center;
     font-family: var(--Josefin);
 }
 
-footer.footer .rights h4 a{
+footer.rights .flex-row h4 a{
     color: var(--white);
+    text-align: center;
+    font-family: var(--Josefin);
+
 }
 
 footer.footer .move-up{
@@ -495,7 +627,7 @@ footer.footer .move-up{
 }
 
 footer.footer .move-up span{
-    color: #eddcc7;
+    color: #bab8b6;
 }
 
 footer.footer .move-up span:hover{
@@ -503,11 +635,15 @@ footer.footer .move-up span:hover{
     cursor: pointer;
 }
 
+
+
+
+
 /* ---------x------- Footer ----------x---------- */
 
 /*              Viewport less then or equal to 1130px            */
 
-@media only screen and (max-width: 1130px){
+@media only screen and (max-width: 1020px){
     .site-content .post-content > .post-image .post-info{
         left: 2rem !important;
         bottom: 1.2rem !important;
@@ -518,18 +654,7 @@ footer.footer .move-up span:hover{
         display: none !important;
     }
 
-    footer.footer .container{
-        grid-template-columns: repeat(2, 1fr);
-    }
 
-}
-
-/*      x       Viewport less then or equal to 1130px    x     */
-
-
-/*              Viewport less then or equal to 750px            */
-
-@media only screen and (max-width: 1020px){
     .nav .nav-menu, .nav .nav-items{
         flex-direction: column;
     }
@@ -553,6 +678,10 @@ footer.footer .move-up span:hover{
     footer.footer .container{
         grid-template-columns: repeat(1, 1fr);
     }
+
+
+
+
 
 }
 
@@ -611,6 +740,14 @@ footer.footer .move-up span:hover{
         font-size: 1rem;
     }
 
+main .site-content .post-content > .post-image, .post-title > a, p{
+    padding: 1rem 2rem;
+    position: relative;
+    font-family: 'Roboto-Thin', cursive;
+    font-size: 1rem;
+}
+
+
 
 }
 
@@ -664,6 +801,9 @@ footer.footer .move-up span:hover{
     }
 
 
+
+
 }
 
 /*        x      Viewport less then or equal to 520px       x     */
+

@@ -1,6 +1,10 @@
 #map {
+    width: 95%;
+    height: 50px;
+    margin-left: 40px;
+    position: relative;
     box-shadow: 5px 5px 5px #888; height: 580px;
-    width: 100hw;
+
 }
 
 
@@ -11,7 +15,7 @@ select{
 
 .info { 
     padding: 6px 8px; 
-    font: 14px/16px Arial, Helvetica, sans-serif; 
+    font: 14px/16px Roboto-Thin, sans-serif; 
     background: white; 
     background: rgba(255,255,255,0.8); 
     box-shadow: 0 0 15px rgba(0,0,0,0.2); 
