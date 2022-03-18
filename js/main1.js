@@ -20,7 +20,7 @@ $(document).ready(function(){
 
 	setInterval(function(){
 		nextSlider();
-	}, 10000);
+	}, 6000);
 
 	// FUNCIONES =========================================================
 
