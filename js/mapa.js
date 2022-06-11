@@ -1,5 +1,5 @@
 //---------- Crear la variable mapa con coordenadas de centro y zoom
-let map = L.map('map').setView([10.4739, -66.5087], 13)
+let map = L.map('map').setView([10.4739, -66.5087], 11)
 
 
 
@@ -89,8 +89,8 @@ info.onAdd = function(map){
 
 //-------------------------- Agregar el metodo que actualiza el control segun el puntero vaya pasando
 info.update = function(props){
-    this._div.innerHTML = '<h4>Total Viviendas</h4>' + 
-                            (props ? '<b>' + props.BARRIO + '</b><br/>' + props.TOT_VIVIEN + ' viviendas</sup>'
+    this._div.innerHTML = '<h4>Total Variable</h4>' + 
+                            (props ? '<b>' + props.BARRIO + '</b><br/>' + props.TOT_VIVIEN + ' variable</sup>'
                             : 'PASE EL PUNTERO POR LA POLGONAL');
 };
 
@@ -100,12 +100,12 @@ info.addTo(map);
 //---------- Generar rangos de colores de acuerdo con el atributo o campo TOT_VIVIEN
 function getColor(d){
     return  d > 900 ? '#f2fb5c' :
-            d > 750 ? '#6290f6' :
-            d > 600 ? '#6290f6' :
-            d > 450 ? '87a9f7' :
-            d > 250 ? '#6290f6' :
-            d > 100 ? '#6290f6' :
-            d > 0    ? '#6290f6' :
+            d > 750 ? '#e6ecf8' :
+            d > 600 ? '#e6ecf8' :
+            d > 450 ? '#e6ecf8' :
+            d > 250 ? '#e6ecf8' :
+            d > 100 ? '#e6ecf8' :
+            d > 0    ? '#e6ecf8' :
                        '#0000FF';
 }
 
