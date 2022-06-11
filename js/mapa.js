@@ -173,20 +173,18 @@ barriosJS = L.geoJson(barrios,{
 
 
 //-------------AGREGAR UN MARCADOR-----------------------------------------
-L.marker([10.4697198, -66.5188964]).addTo(map)
-    .bindPopup('Poligonal <br> C-MIX-2018-11-0103.')
-    .openPopup();
 L.marker([10.4892115, -66.5154384]).addTo(map)
     .bindPopup('Poligonal <br> C-RUR-2018-11-0054.')
-    .openPopup();
-L.marker([10.4968300, -66.5304963]).addTo(map)
-    .bindPopup('Poligonal <br> C-MIX-2021-05-0009.')
     .openPopup();
     L.marker([10.4597306, -66.4990616]).addTo(map)
     .bindPopup('Poligonal <br> C-RUR-2018-11-0054.')
     .openPopup();
- 
-
+ L.marker([10.4697198, -66.5188964]).addTo(map)
+    .bindPopup('Poligonal <br> C-MIX-2018-11-0103.')
+    .openPopup();
+L.marker([10.4968300, -66.5304963]).addTo(map)
+    .bindPopup('Poligonal <br> C-MIX-2021-05-0009.')
+    .openPopup();
 
  //l--------------logo position: bottomright, topright, topleft, bottomleft
     var logo = L.control({position: 'topleft'});
