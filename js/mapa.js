@@ -1,5 +1,5 @@
 //---------- Crear la variable mapa con coordenadas de centro y zoom
-let map = L.map('map').setView([10.4739, -66.5087], 11)
+let map = L.map('map').setView([10.4739, -66.5087], 13)
 
 
 
