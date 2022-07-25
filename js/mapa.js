@@ -21,7 +21,7 @@ document.getElementById('select-location').addEventListener('change', function(e
 
 
 //---------- Agregar mapa base para el Mini Mapa
-var carto_light = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {attribution: '©OpenStreetMap, ©CartoDB',subdomains: 'abcd',maxZoom: 24});
+var carto_light = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {attribution: '©OpenStreetMap, ©CartoDB',subdomains: 'abcd',maxZoom: 50});
 
 
 
@@ -41,7 +41,7 @@ var minimap = new L.Control.MiniMap(carto_light,
 // Configurar PopUp
 function popup(feature,layer){
     if(feature.properties && feature.properties.BARRIO){
-        layer.bindPopup("<strong>Barrio: </strong>" + feature.properties.BARRIO + "<br/>" + "<strong>Localidad: </strong>" + feature.properties.LOCALIDAD);
+        layer.bindPopup("<strong>Barrio: </strong>" + feature.properties.BARRIO + "<br/>" + "<strong>Localidad: </strong>" + feature.properties.TIPOCOMUNA);
     }
 }
 
@@ -90,30 +90,28 @@ info.onAdd = function(map){
 //-------------------------- Agregar el metodo que actualiza el control segun el puntero vaya pasando
 info.update = function(props){
     this._div.innerHTML = '<h4>Total Variable</h4>' + 
-                            (props ? '<b>' + props.BARRIO + '</b><br/>' + props.TOT_VIVIEN + ' variable</sup>'
+                            (props ? '<b>' + props.BARRIO + '</b><br/>' + props.TOT_POB + ' Habitantes</sup>'
                             : 'PASE EL PUNTERO POR LA POLGONAL');
 };
 
 info.addTo(map);
 
 
-//---------- Generar rangos de colores de acuerdo con el atributo o campo TOT_VIVIEN
+//---------- Generar rangos de colores de acuerdo con el atributo o campo TOT_POB
 function getColor(d){
-    return  d > 900 ? '#f2fb5c' :
-            d > 750 ? '#e6ecf8' :
-            d > 600 ? '#e6ecf8' :
-            d > 450 ? '#e6ecf8' :
-            d > 250 ? '#e6ecf8' :
-            d > 100 ? '#e6ecf8' :
-            d > 0    ? '#e6ecf8' :
+    return  d > 90000 ? '#E4EBF8' :
+            d > 45000? '#5FF397' :
+            d > 10000? '#E4CB6E' :
+            d > 5000? '#86C1F2' :
+            d > 1000 ? '#D79CDC' :
                        '#0000FF';
 }
 
-//-------------------- Crear la funcion para mostrar la simbologia de acuerdo al campo TOT_VIVIEN
+//-------------------- Crear la funcion para mostrar la simbologia de acuerdo al campo TOT_POB
 
 function style(feature){
     return {
-        fillColor: getColor(feature.properties.TOT_VIVIEN,),
+        fillColor: getColor(feature.properties.TOT_POB,),
         weight: 1,
         opacity: 1,
         color: 'BLUE',
