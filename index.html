@@ -3,10 +3,35 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <title>HCL Digital</title>
+    <script src="js/jquery-3.1.0.min.js"></script>
+    <script src="js/main1.js"></script>
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+              integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+              crossorigin=""/>
+
+    <link rel="stylesheet" type="text/css" href="css/Control.MiniMap.min.css">
+            <link rel="stylesheet" type="text/css" href="css/leaflet.legend.css">
+            <link rel="stylesheet" type="text/css" href="css/leaflet-search.css">
+            <link rel="stylesheet" type="text/css" href="css/leaflet-search.mobile.css">
+
+
+    <link rel="stylesheet" type="text/css" href="css/mapa.css"> 
+            <link rel="stylesheet" href="css/font-awesome.css">
+
+
     <link rel="shortcut icon" href="/assets/Blog-post/ceva.webp" type="image/x-icon">
+
+    <!----Inicio JS ---->
+            <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+              integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+              crossorigin=""></script>         
+
+            <!----FINJS ---->
 
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="css/all.css">
@@ -43,10 +68,6 @@
                     <li class="nav-link">
                         <a href="presupuesto.html">Presupuestos</a>
                     </li> 
-                    
-                    <li class="nav-link">
-                        <a href="Qsomos.html">Nosotros</a>
-                    </li>
                     <li class="nav-link">
                         <a href="contacto.html">Contacto</a>
                     </li>
@@ -89,14 +110,12 @@
                             <img src="./assets/Blog-post/COCOA@3x.png" alt="post-1" >
                             <div class="blog-title">
                                 <h3>MARKETING DIGITAL</h3>
-                                <button class="btn btn-blog"><a href="MDigital.html">MERCADOTECNIA...</a></button>
                             </div>
                         </div>
                         <div class="blog-content" data-aos="fade-right" data-aos-delay="200">
                             <img src="./assets/Blog-post/BARLO@2x.png" alt="post-1">
                             <div class="blog-title">
                                 <h3>GEOMARKETING</h3>
-                                <button class="btn btn-blog"><a href="Carto.html">CADENA DE SUMINISTRO...</a></button>
                             </div>
                         </div>
                         
@@ -104,16 +123,51 @@
                             <img src="./assets/Blog-post/COCOA@2x.png" alt="post-1">
                             <div class="blog-title">
                                 <h3>INTELIGENCIA DE NEGOCIOS</h3>
-                                <button class="btn btn-blog"><a href="Estrategia.html">ESTRATEGIA DE INVERSIÓN...</a></button>
+                            </div>
+                        </div>
+                        <div class="blog-content" data-aos="fade-right" data-aos-delay="200">
+                            <img src="./assets/Blog-post/MURRY@2x.png" alt="post-1">
+                            <div class="blog-title">
+                                <h3>TABLERO CONTROL (KPIs)</h3>
+                            </div>
+                        </div>
+                        <div class="blog-content" data-aos="fade-right" data-aos-delay="200">
+                            <img src="./assets/Blog-post/MURRY@2x.png" alt="post-1">
+                            <div class="blog-title">
+                                <h3>VISIÓN 360 GRADOS</h3>
+                            </div>
+                        </div>
+                        <div class="blog-content" data-aos="fade-right" data-aos-delay="200">
+                            <img src="./assets/Blog-post/MURRY@2x.png" alt="post-1">
+                            <div class="blog-title">
+                                <h3>METRICAS SEO </h3>
+                            </div>
+                        </div>
+                        <div class="blog-content" data-aos="fade-right" data-aos-delay="200">
+                            <img src="./assets/Blog-post/MURRY@2x.png" alt="post-1">
+                            <div class="blog-title">
+                                <h3>DISEÑO WEB </h3>
+                            </div>
+                        </div>
+                        <div class="blog-content" data-aos="fade-right" data-aos-delay="200">
+                            <img src="./assets/Blog-post/MURRY@2x.png" alt="post-1">
+                            <div class="blog-title">
+                                <h3>DISEÑO DIGITAL </h3>
+                            </div>
+                        </div>
+                        <div class="blog-content" data-aos="fade-right" data-aos-delay="200">
+                            <img src="./assets/Blog-post/MURRY@2x.png" alt="post-1">
+                            <div class="blog-title">
+                                <h3>CRM SOCIAL </h3>
                             </div>
                         </div>
                         <div class="blog-content" data-aos="fade-right" data-aos-delay="200">
                             <img src="./assets/Blog-post/MURRY@2x.png" alt="post-1">
                             <div class="blog-title">
                                 <h3>FORMACIÓN PERSONAL </h3>
-                                <button class="btn btn-blog"><a href="#">DESARROLLO HABILIDAD LABORAL...</a></button>
                             </div>
                         </div>
+                        
                         
                     </div>
                     <div class="owl-navigation">
@@ -123,6 +177,32 @@
                 </div>
             </div>
         </section>
+<!---INICIO OPCIONES DEL MAPA ---> 
+        <h3>EJEMPLO DE UN NUEVO ESTRACTO DE GEOREFERENCIACIÓN </h3>
+        <select name="select-location" id="select-location">
+            <option value="-1">Seleccione un lugar</option>   
+            <option value="10.491669700, -66.528557900">CAPRI Y MONACO</option>
+            <option value="10.490442200, -66.535409700">COLINAS DE VALLE ARRIBA</option>
+            <option value="10.476947500, -66.52480500">COLINAS DE VALLE CIELO</option>
+            <option value="10.482387600, -66.532264900">CONJUNTO LONDRES</option>
+            <option value="10.476791600, -66.531925700">GIRAZOLES DE ZAMORA</option>
+            <option value="10.474076000, -66.530925900">FLORES DE VALLE ARRIBA</option>
+            <option value="10.474915700, -66.528333600">LOMAS DE VALLE CIELO</option>
+            <option value="10.487345500, -66.525346200">TRIUNFADORES VALLE BONITO</option>
+            <option value="10.476423900, -66.527149400">VALLE CIELO</option>
+            <option value="10.483971800, -66.537229600">VALLE ENCANTADO</option>
+            <option value="10.478591200, -66.529139600">VALLE ESPERANZA</option>
+            <option value="10.484830000, -66.530496300">VALLE GINEBRA</option>  
+        </select>
+        <!---INICIO JAVA SCRIP MAPA ---> 
+        <div id="map"></div>
+            <script src="js/Control.MiniMap.min.js"></script>   
+            <script src="js/leaflet.legend.js"></script> 
+            <script src="js/leaflet-search.js"></script>
+            <script src="js/leaflet-search-geocoder.js"></script>
+            <script src="js/barrios.js"></script>
+            <script src="js/mapa.js"></script>        
+       <!---FIN JAVA SCRIP MAPA --->
     </main>
 
 
