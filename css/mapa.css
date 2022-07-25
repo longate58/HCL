@@ -1,9 +1,9 @@
 #map {
     width: 95%;
-    height: 50px;
+    height: 70px;
     margin-left: 40px;
     position: relative;
-    box-shadow: 5px 5px 5px #888; height: 580px;
+    box-shadow: 5px 5px 5px #888; height: 780px;
 
 }
 
@@ -19,7 +19,7 @@ select{
     background: white; 
     background: rgba(255,255,255,0.8); 
     box-shadow: 0 0 15px rgba(0,0,0,0.2); 
-    border-radius: 5px; 
+    border-radius: 18px; 
 } 
 
 .info h4 { 
