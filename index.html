@@ -1,248 +1,203 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>HCL Digital</title>
-    <script src="js/jquery-3.1.0.min.js"></script>
-    <script src="js/main1.js"></script>
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
-              integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
-              crossorigin=""/>
-    <link rel="stylesheet" type="text/css" href="css/Control.MiniMap.min.css">
-            <link rel="stylesheet" type="text/css" href="css/leaflet.legend.css">
-            <link rel="stylesheet" type="text/css" href="css/leaflet-search.css">
-            <link rel="stylesheet" type="text/css" href="css/leaflet-search.mobile.css">
-    <link rel="stylesheet" type="text/css" href="css/mapa.css"> 
-    <link rel="stylesheet" href="css/font-awesome.css">
-    <link rel="shortcut icon" href="/assets/Blog-post/ceva.webp" type="image/x-icon">
-
-    <!----Inicio JS ---->
-    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
-              integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
-              crossorigin=""></script>         
-    <!----FINJS ---->
-
-    <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="css/all.css">
-    <!-- --------- Owl-Carousel ------------------->
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/owl.theme.default.min.css">
-    <!-- ------------ AOS Library ------------------------- -->
-    <link rel="stylesheet" href="css/aos.css">
-    <!-- Custom Style   -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans&display=swap" rel="stylesheet"> 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css">
-    <link rel="shortcut icon" href="assets/ceva.webp" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.css">
-
-    <link rel="stylesheet" href="css/Style.css">
-
-</head>
-
-<body>
-
-    <!-- ----------------------------  navbar - Navigation ---------------------------------------------- -->
-
-    <nav class="nav">
-        <div class="nav-menu flex-row">
-            <div class="nav-brand">
-                <a class="text-white">HCL DIGITAL</a>
-            </div>
-            <div class="toggle-collapse">
-                <div class="toggle-icons">
-                    <i class="fas fa-bars"></i>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>HCL Digital</title>
+        <script src="js/jquery-3.1.0.min.js"></script>
+        <script src="js/main1.js"></script>
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+        integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+        crossorigin=""/>
+        <link rel="stylesheet" type="text/css" href="css/Control.MiniMap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/leaflet.legend.css">
+        <link rel="stylesheet" type="text/css" href="css/leaflet-search.css">
+        <link rel="stylesheet" type="text/css" href="css/leaflet-search.mobile.css">
+        <link rel="stylesheet" type="text/css" href="css/mapa.css"> 
+        <link rel="stylesheet" href="css/font-awesome.css">
+        <link rel="shortcut icon" href="/assets/Blog-post/ceva.webp" type="image/x-icon">
+        <!----Inicio JS ---->
+        <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+                  integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+                  crossorigin=""></script>         
+        <!----FINJS ---->
+        <!-- Font Awesome Icons -->
+        <link rel="stylesheet" href="css/all.css">
+        <!-- --------- Owl-Carousel ------------------->
+        <link rel="stylesheet" href="css/owl.carousel.min.css">
+        <link rel="stylesheet" href="css/owl.theme.default.min.css">
+        <!-- ------------ AOS Library ------------------------- -->
+        <link rel="stylesheet" href="css/aos.css">
+        <!-- Custom Style   -->
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans&display=swap" rel="stylesheet"> 
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css">
+        <link rel="shortcut icon" href="assets/ceva.webp" type="image/x-icon">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.css">
+        <link rel="stylesheet" href="css/Style.css">
+    </head>
+    <body>
+        <!-- ----------------------------  navbar - Navigation ---------------------------------------------- -->
+        <nav class="nav">
+            <div class="nav-menu flex-row">
+                <div class="nav-brand">
+                    <a class="text-white">HCL DIGITAL</a>
+                </div>
+                <div class="toggle-collapse">
+                    <div class="toggle-icons">
+                        <i class="fas fa-bars"></i>
+                    </div>
+                </div>
+                <div class="social text-white">
+                    <a href="https://www.instagram.com/hcl_digital"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.twitter.com/digital_hcl"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.facebook.com/22HCLDigital"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
                 </div>
             </div>
-
-            <div class="social text-white">
-                <a href="https://www.instagram.com/hcl_digital"><i class="fab fa-instagram"></i></a>
-                <a href="https://www.twitter.com/digital_hcl"><i class="fab fa-twitter"></i></a>
-                <a href="https://www.facebook.com/22HCLDigital"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-youtube"></i></a>
-            </div>
-
-        </div>
-    </nav>
-
-    <!-- ------------x---------------  navbar - Navigation--------------------------x------------------- -->
-
-    <!----------------------------- Main Site Section ------------------------------>
-
-    <main>
-
-        <!------------------------ Site Title ---------------------->
-
-        <section class="site-title">
-            <div class="site-background" data-aos="fade-up" data-aos-delay="100">
-                
-             </div>
-        </section>
-
-        <!------------x----------- Site Title ----------x----------->
-
-        <!-- --------------------- Blog Carousel ----------------- -->
-
-        <section>
-            <div class="blog">
-                <div class="container">
-                    <h2>PRODUCTOS OFERTADOS</h2>
-                    <div class="owl-carousel owl-theme blog-post">
-                        <div class="blog-content" data-aos="fade-right" data-aos-delay="200">
-                            <img src="./assets/Blog-post/1.png" alt="post-1" >
-                            <div class="blog-title">
-                                <h3>MARKETING DIGITAL</h3>
+        </nav>
+        <main>
+            <!------------------------ Site Title: imagen todo en un mismo lugar ---------------------->
+            <section class="site-title">
+                <div class="site-background" data-aos="fade-up" data-aos-delay="100"></div>
+            </section>
+            <!-- --------------------- Blog Carousel ----------------- -->
+            <section>
+                <div class="blog">
+                    <div class="container">
+                        <h2>PRODUCTOS OFERTADOS</h2>
+                        <div class="owl-carousel owl-theme blog-post">
+                            <div class="blog-content" data-aos="fade-right" data-aos-delay="200">
+                                <img src="./assets/Blog-post/1.png" alt="post-1" >
+                                <div class="blog-title">
+                                    <h3>MARKETING DIGITAL</h3>
+                                </div>
                             </div>
-                        </div>
-                        <div class="blog-content" data-aos="fade-right" data-aos-delay="200">
-                            <img src="./assets/Blog-post/2.png" alt="post-1">
-                            <div class="blog-title">
-                                <h3>GEOMARKETING</h3>
+                            <div class="blog-content" data-aos="fade-right" data-aos-delay="200">
+                                <img src="./assets/Blog-post/2.png" alt="post-1">
+                                <div class="blog-title">
+                                    <h3>GEOMARKETING</h3>
+                                </div>
                             </div>
-                        </div>
-                        
-                        <div class="blog-content" data-aos="fade-right" data-aos-delay="200">
-                            <img src="./assets/Blog-post/6.png" alt="post-1">
-                            <div class="blog-title">
-                                <h3>INTELIGENCIA DE NEGOCIOS</h3>
+                            <div class="blog-content" data-aos="fade-right" data-aos-delay="200">
+                                <img src="./assets/Blog-post/6.png" alt="post-1">
+                                <div class="blog-title">
+                                    <h3>INTELIGENCIA DE NEGOCIOS</h3>
+                                </div>
                             </div>
-                        </div>
-                        <div class="blog-content" data-aos="fade-right" data-aos-delay="200">
-                            <img src="./assets/Blog-post/3.png" alt="post-1">
-                            <div class="blog-title">
-                                <h3>TABLERO CONTROL (KPIs)</h3>
+                            <div class="blog-content" data-aos="fade-right" data-aos-delay="200">
+                                <img src="./assets/Blog-post/3.png" alt="post-1">
+                                <div class="blog-title">
+                                    <h3>TABLERO CONTROL (KPIs)</h3>
+                                </div>
                             </div>
-                        </div>
-                        <div class="blog-content" data-aos="fade-right" data-aos-delay="200">
-                            <img src="./assets/Blog-post/4.png" alt="post-1">
-                            <div class="blog-title">
-                                <h3>VISIÓN 360 GRADOS</h3>
+                            <div class="blog-content" data-aos="fade-right" data-aos-delay="200">
+                                <img src="./assets/Blog-post/4.png" alt="post-1">
+                                <div class="blog-title">
+                                    <h3>VISIÓN 360 GRADOS</h3>
+                                </div>
                             </div>
-                        </div>
-                        <div class="blog-content" data-aos="fade-right" data-aos-delay="200">
-                            <img src="./assets/Blog-post/5.png" alt="post-1">
-                            <div class="blog-title">
-                                <h3>METRICAS SEO </h3>
+                            <div class="blog-content" data-aos="fade-right" data-aos-delay="200">
+                                <img src="./assets/Blog-post/5.png" alt="post-1">
+                                <div class="blog-title">
+                                    <h3>METRICAS SEO </h3>
+                                </div>
                             </div>
-                        </div>
-                        <div class="blog-content" data-aos="fade-right" data-aos-delay="200">
-                            <img src="./assets/Blog-post/9.png" alt="post-1">
-                            <div class="blog-title">
-                                <h3>DISEÑO WEB </h3>
+                            <div class="blog-content" data-aos="fade-right" data-aos-delay="200">
+                                <img src="./assets/Blog-post/9.png" alt="post-1">
+                                <div class="blog-title">
+                                    <h3>DISEÑO WEB </h3>
+                                </div>
                             </div>
-                        </div>
-                        <div class="blog-content" data-aos="fade-right" data-aos-delay="200">
-                            <img src="./assets/Blog-post/10.png" alt="post-1">
-                            <div class="blog-title">
-                                <h3>DISEÑO DIGITAL </h3>
+                            <div class="blog-content" data-aos="fade-right" data-aos-delay="200">
+                                <img src="./assets/Blog-post/10.png" alt="post-1">
+                                <div class="blog-title">
+                                    <h3>DISEÑO DIGITAL </h3>
+                                </div>
                             </div>
-                        </div>
-                        <div class="blog-content" data-aos="fade-right" data-aos-delay="200">
-                            <img src="./assets/Blog-post/8.png" alt="post-1">
-                            <div class="blog-title">
-                                <h3>CRM SOCIAL </h3>
+                            <div class="blog-content" data-aos="fade-right" data-aos-delay="200">
+                                <img src="./assets/Blog-post/8.png" alt="post-1">
+                                <div class="blog-title">
+                                    <h3>CRM SOCIAL </h3>
+                                </div>
                             </div>
+                            <div class="blog-content" data-aos="fade-right" data-aos-delay="200">
+                                <img src="./assets/Blog-post/11.png" alt="post-1">
+                                <div class="blog-title">
+                                    <h3>FORMACIÓN PERSONAL </h3>
+                                </div>
+                            </div>    
                         </div>
-                        <div class="blog-content" data-aos="fade-right" data-aos-delay="200">
-                            <img src="./assets/Blog-post/11.png" alt="post-1">
-                            <div class="blog-title">
-                                <h3>FORMACIÓN PERSONAL </h3>
-                            </div>
+                        <div class="owl-navigation">
+                            <span class="owl-nav-prev"><i class="fas fa-long-arrow-alt-left"></i></span>
+                            <span class="owl-nav-next"><i class="fas fa-long-arrow-alt-right"></i></span>
                         </div>
-                        
-                        
+                        <h2>GEOMARKETING LOCAL</h2>
                     </div>
-                    <div class="owl-navigation">
-                        <span class="owl-nav-prev"><i class="fas fa-long-arrow-alt-left"></i></span>
-                        <span class="owl-nav-next"><i class="fas fa-long-arrow-alt-right"></i></span>
-                    </div>
-                    <h2>GEOMARKETING LOCAL</h2>
                 </div>
-            </div>
-        </section>
-        <div id="map"></div>
-        <div class="post-title">
-                <p>HCL Digital, ofrecen asesoría a su equipo de trabajo con la finalidad de mostrar la movilidad y el comportamiento espacial de los mercados, la ruta mas efectiva de su Fuerza de Ventas, el accionar de los puntos de ventas, análisis de mercadotecnia sujeto a un "Perfil Geográfico" a diversas escalas geograficas: país, estado, municipio, parroquia, comuna, consejo comunal. Ejemplo:
-            
-        <select name="select-location" id="select-location">
-            <option value="-1">Seleccione un lugar</option>   
-            <option value="10.491669700, -66.528557900">CAPRI Y MONACO</option>
-            <option value="10.490442200, -66.535409700">COLINAS DE VALLE ARRIBA</option>
-            <option value="10.476947500, -66.52480500">COLINAS DE VALLE CIELO</option>
-            <option value="10.482387600, -66.532264900">CONJUNTO LONDRES</option>
-            <option value="10.476791600, -66.531925700">GIRAZOLES DE ZAMORA</option>
-            <option value="10.474076000, -66.530925900">FLORES DE VALLE ARRIBA</option>
-            <option value="10.474915700, -66.528333600">LOMAS DE VALLE CIELO</option>
-            <option value="10.487345500, -66.525346200">TRIUNFADORES VALLE BONITO</option>
-            <option value="10.476423900, -66.527149400">VALLE CIELO</option>
-            <option value="10.483971800, -66.537229600">VALLE ENCANTADO</option>
-            <option value="10.478591200, -66.529139600">VALLE ESPERANZA</option>
-            <option value="10.484830000, -66.530496300">VALLE GINEBRA</option>  
-        </select></p>
-
-        </div>  
-        <!---INICIO JAVA SCRIP MAPA ---> 
-
-        
+            </section>
+            <div id="map"></div>
+            <div class="post-title">
+                <p>HCL Digital, ofrecen asesoría a su equipo de trabajo con la finalidad de mostrar la movilidad y el comportamiento espacial de los mercados, la ruta mas efectiva de su Fuerza de Ventas, el accionar de los puntos de ventas, análisis de mercadotecnia sujeto a un "Perfil Geográfico" a diversas escalas geograficas: país, estado, municipio, parroquia, comuna, consejo comunal. Ejemplo:  
+                <select name="select-location" id="select-location">
+                    <option value="-1">Seleccione un lugar</option>   
+                    <option value="10.491669700, -66.528557900">CAPRI Y MONACO</option>
+                    <option value="10.490442200, -66.535409700">COLINAS DE VALLE ARRIBA</option>
+                    <option value="10.476947500, -66.52480500">COLINAS DE VALLE CIELO</option>
+                    <option value="10.482387600, -66.532264900">CONJUNTO LONDRES</option>
+                    <option value="10.476791600, -66.531925700">GIRAZOLES DE ZAMORA</option>
+                    <option value="10.474076000, -66.530925900">FLORES DE VALLE ARRIBA</option>
+                    <option value="10.474915700, -66.528333600">LOMAS DE VALLE CIELO</option>
+                    <option value="10.487345500, -66.525346200">TRIUNFADORES VALLE BONITO</option>
+                    <option value="10.476423900, -66.527149400">VALLE CIELO</option>
+                    <option value="10.483971800, -66.537229600">VALLE ENCANTADO</option>
+                    <option value="10.478591200, -66.529139600">VALLE ESPERANZA</option>
+                    <option value="10.484830000, -66.530496300">VALLE GINEBRA</option>  
+                </select></p>
+            </div>  
+            <!---INICIO JAVA SCRIP MAPA ---> 
             <script src="js/Control.MiniMap.min.js"></script>   
             <script src="js/leaflet.legend.js"></script> 
             <script src="js/leaflet-search.js"></script>
             <script src="js/leaflet-search-geocoder.js"></script>
             <script src="js/barrios.js"></script>
             <script src="js/mapa.js"></script>        
-       <!---FIN JAVA SCRIP MAPA --->
-<!---INICIO OPCIONES DEL MAPA ---> 
-        
-                  
-    </main>
-
-
-    <footer class="footer">
-        <div class="container">
-            <div class="about-us" data-aos="fade-right" data-aos-delay="200">
-                <h2>MISIÓN HCL Digital:</h2>
-                <p>Llevar a cabo servicios de asesoría y consultoría de alta calidad para aquellos clientes que aspiran a la mejor optimización de sus organizaciones: mediante la competitividad en el ámbito empresarial y la modernización administrativa.<br><br> Desde la perspectiva de una mejora continua, innovadora, dinámica, y con calidad en la gestión especializada; por todo ello conseguimos en todo momento la SATISFACCIÓN DE NUESTROS CLIENTES.</p>
-            </div>
-            <div class="follow" data-aos="fade-left" data-aos-delay="200">
-                <h2>Contáctanos</h2>
-                <p>+584128976197, +584241973735 y +584242095783<br>2021hcldigital@gmailcom</p>
-                <div>
-     
-                    <a href="https://www.twitter.com/digital_hcl"><i class="fab fa-twitter"></i></a>
-                    <a href="https://www.instagram.com/hcl_digital"><i class="fab fa-instagram"></i></a>
-                    <a href="https://www.facebook.com/22HCLDigital"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-youtube"></i></a>
-
-                    
+           <!---FIN JAVA SCRIP MAPA --->          
+        </main>
+        <footer class="footer">
+            <div class="container">
+                <div class="about-us" data-aos="fade-right" data-aos-delay="200">
+                    <h2>MISIÓN HCL Digital:</h2>
+                    <p>Llevar a cabo servicios de asesoría y consultoría de alta calidad para aquellos clientes que aspiran a la mejor optimización de sus organizaciones: mediante la competitividad en el ámbito empresarial y la modernización administrativa.<br><br> Desde la perspectiva de una mejora continua, innovadora, dinámica, y con calidad en la gestión especializada; por todo ello conseguimos en todo momento la SATISFACCIÓN DE NUESTROS CLIENTES.</p>
+                </div>
+                <div class="follow" data-aos="fade-left" data-aos-delay="200">
+                    <h2>Contáctanos</h2>
+                    <p>+584128976197, +584241973735 y +584242095783<br>2021hcldigital@gmailcom</p>
+                    <div>
+                        <a href="https://www.twitter.com/digital_hcl"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/hcl_digital"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/22HCLDigital"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>     
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="rights flex-row">
-            <h4 class="text-white">
-              <a target="_black">Copyright ©2022 All rights reserved | made by HCL Digital, UPF</a>
-            </h4>
-        </div>
-        <div class="move-up">
-            <span><i class="fas fa-arrow-circle-up fa-2x"></i></span>
-        </div>
-    </footer>
+            <div class="rights flex-row">
+                <h4 class="text-white"><a target="_black">Copyright ©2022 All rights reserved | made by HCL Digital, UPF</a></h4>
+            </div>
+            <div class="move-up"><span><i class="fas fa-arrow-circle-up fa-2x"></i></span></div>
+        </footer>
+        <!-- Jquery Library file -->
+        <script src="./js/Jquery3.4.1.min.js"></script>
 
-    <!-- -------------x------------- Footer --------------------x------------------- -->
+        <!-- --------- Owl-Carousel js ------------------->
+        <script src="./js/owl.carousel.min.js"></script>
 
-    <!-- Jquery Library file -->
-    <script src="./js/Jquery3.4.1.min.js"></script>
+        <!-- ------------ AOS js Library  ------------------------- -->
+        <script src="./js/aos.js"></script>
 
-    <!-- --------- Owl-Carousel js ------------------->
-    <script src="./js/owl.carousel.min.js"></script>
-
-    <!-- ------------ AOS js Library  ------------------------- -->
-    <script src="./js/aos.js"></script>
-
-    <!-- Custom Javascript file -->
-    <script src="./js/main.js"></script>
-</body>
+        <!-- Custom Javascript file -->
+        <script src="./js/main.js"></script>
+        <!-- -------------x------------- Footer --------------------x------------------- -->
+    </body>
 
 </html>
