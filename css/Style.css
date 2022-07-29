@@ -53,12 +53,6 @@ html, body{
 
 .text-white{
     color: var(--text-white);}
-
-.flex-row{
-    display: flex;
-    flex-direction: row;    
-    flex-wrap: wrap;}
-
 /* ---------------- fin nav ---------------*/
 
 /* ---------------- Site Title ---------------*/
@@ -133,21 +127,6 @@ section .container .owl-nav{
     margin: 0 auto;
     width: 100%;}
 
-h1{
-    font-family: var(--Lexend);
-    font-size: 2rem;}
-
-h2{
-    font-family: var(--Lexend);
-    font-size: 1.8rem;}
-
-h3{
-    font-family: var(--Abel);
-    font-size: 1.5rem;}
-
-span{
-    font-family: var(--Abel);}
-
 .owl-nav .owl-prev .owl-nav-prev,
 .owl-nav .owl-next .owl-nav-next{
     color: var(--text-gray);
@@ -177,12 +156,37 @@ span{
 
 
 
+a{
+    text-decoration: none;
+    color: var(--textgray);
+}
+
+.flex-row{
+    display: flex;
+    flex-direction: row;    
+    flex-wrap: wrap;
+}
 
 
+h1{
+    font-family: var(--Lexend);
+    font-size: 2rem;
+}
+
+h2{
+    font-family: var(--Lexend);
+    font-size: 1.8rem;
+}
+
+h3{
+    font-family: var(--Abel);
+    font-size: 1.5rem;
+}
 
 
-
-
+span{
+    font-family: var(--Abel);
+}
 
 
 
