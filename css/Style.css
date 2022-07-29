@@ -2,17 +2,11 @@
 
 
 html, body{
-    margin: 0%;
-    padding: 0;
     box-sizing: border-box;
     overflow-x: hidden;
     font-family: 'Roboto-Thin', sans-serif;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
     box-sizing: border-box;
-    font-family: 'Roboto-Thin', sans-serif;
-
-}
+    font-family: 'Roboto-Thin', sans-serif;}
 
 :root{
 
@@ -32,21 +26,124 @@ html, body{
     --Anton: 'Roboto-Thin', cursive;
     --Josefin : 'Roboto-Thin', cursive;
     --Lexend: 'Roboto-Thin'cursive;
-    --Livvic : 'Roboto-Thin', cursive;
-}
+    --Livvic : 'Roboto-Thin', cursive;}
 
 
-/* ---------------- Global Classes ---------------*/
+/* ---------------- nav ---------------*/
+.nav .nav-brand a{
+    font-size: 2rem;
+    padding: 1rem 0;
+    display: block;
+    top: 0;
+    font-family: var(--Lexend);
+    position: relative;}
+
+.nav .social{
+    padding: 1.4rem 0}
+
+.nav .social i{
+    padding: 0 .8rem;
+    font-size: 2rem;}
+
+.nav .social i:hover{
+    color: #FF9900;}
+/* ---------------- fin nav ---------------*/
+
+/* ---------------- Site Title ---------------*/
+main .site-title{
+    background: url('../assets//Blog-post/fondo_pantalla.jpg');
+    background-size: cover;
+    height: 95vh;
+    display: flex;
+    justify-content: center;}
+
+main .site-title .site-background{
+    padding-top: 5rem;
+    text-align: center;
+    color: var(--white);}
+
+main .site-title h1, h3{
+    margin: .3rem;}
+
+main .site-title .btn{
+    margin: 1.8rem;
+    background: var(--sky);}
+
+main .site-title .btn:hover{
+    background: transparent;
+    border: 1px solid var(--white);
+    color: var(--gray);}
+/* ---------------- fin Site Title ---------------*/
+
+/* --------------- Blog Carousel ------------ */
+
+main .blog{
+    background-repeat: no-repeat;
+    background-position: right;
+    height: 100vh;
+    width: 100%;
+    background-size: 45%;}
+
+main .blog .blog-post{
+    padding-top: 2rem;}
+
+main .blog-post .blog-content{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 80%;
+    margin: 3rem 2rem;
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.2);}
+
+main .blog-content .blog-title{
+    padding: 2rem 0;
+    font-family: var(--Lexend);}
+
+main .blog-content .blog-title h1, h3, h4{
+    padding: 2rem 0;
+    font-family: var(--Lexend);}
+
+main .blog-content .btn-blog{
+    padding: .7rem 2rem;
+    background: var(--sky);
+    margin: .5rem;
+    color: var(--text-white);}
+
+main .blog-content span{
+    display: block;}
+
+section .container .owl-nav{
+    position: absolute;
+    top: 0%;
+    margin: 0 auto;
+    width: 100%;}
+
+.owl-nav .owl-prev .owl-nav-prev,
+.owl-nav .owl-next .owl-nav-next{
+    color: var(--text-gray);
+    background: transparent;
+    font-size: 2rem;}
+
+.owl-theme .owl-nav [class*='owl-']:hover{
+    background: transparent;
+    color: var(--midnight);}
+
+.owl-theme .owl-nav [class*='owl-']{
+    outline: none;}
+/* -------x------- Blog Carousel -----x------ */
 
 
-/* ----------------  ---------------*/
-
-ul,ol{
-    list-style: none;
-}
 
 
-/* ----------------  ---------------*/
+
+
+
+
+
+
+
+
+
 a{
     text-decoration: none;
     color: var(--textgray);
@@ -58,22 +155,20 @@ a{
     flex-wrap: wrap;
 }
 
-ul{
-    list-style-type: none;
-}
 
 h1{
     font-family: var(--Lexend);
-    font-size: 2.5rem;
+    font-size: 2rem;
 }
 
 h2{
     font-family: var(--Lexend);
+    font-size: 1.8rem;
 }
 
 h3{
     font-family: var(--Abel);
-    font-size: 1.3rem;
+    font-size: 1.5rem;
 }
 
 
@@ -166,26 +261,9 @@ p{
     color: var(--text-white);
 }
 
-.nav .nav-brand a{
-    font-size: 1.6rem;
-    padding: 1rem 0;
-    display: block;
-    font-family: var(--Lexend);
-    position: relative;
 
-}
 
-.nav .social{
-    padding: 1.4rem 0
-}
 
-.nav .social i{
-    padding: 0 .2rem;
-}
-
-.nav .social i:hover{
-    color: #FFFFFF;
-}
 
 /* -------x------- navbar - Navigation ---------x------- */
 
@@ -195,107 +273,11 @@ p{
 /* --------------- Site title ---------------- */
 
 
-main .site-title{
-    background: url('../assets//Blog-post/fondo_pantalla.jpg');
-    background-size: cover;
-    height: 95vh;
-    display: flex;
-    justify-content: center;
-}
 
-main .site-title .site-background{
-    padding-top: 5rem;
-    text-align: center;
-    color: var(--white);
-}
-
-main .site-title h1, h3{
-    margin: .3rem;
-}
-
-main .site-title .btn{
-    margin: 1.8rem;
-    background: var(--sky);
-}
-
-main .site-title .btn:hover{
-    background: transparent;
-    border: 1px solid var(--white);
-    color: var(--gray);
-}
 
 /* --------x------ Site title --------x------- */
 
-/* --------------- Blog Carousel ------------ */
 
-main .blog{
-    background-repeat: no-repeat;
-    background-position: right;
-    height: 100vh;
-    width: 100%;
-    background-size: 45%;
-}
-
-main .blog .blog-post{
-    padding-top: 2rem;
-}
-
-main .blog-post .blog-content{
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    width: 80%;
-    margin: 3rem 2rem;
-    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.2);
-}
-
-main .blog-content .blog-title{
-    padding: 2rem 0;
-    font-family: var(--Lexend);
-}
-
-main .blog-content .blog-title h1, h3, h4{
-    padding: 2rem 0;
-    font-family: var(--Lexend);
-}
-
-main .blog-content .btn-blog{
-    padding: .7rem 2rem;
-    background: var(--sky);
-    margin: .5rem;
-    color: var(--text-white);
-
-}
-
-main .blog-content span{
-    display: block;
-}
-
-section .container .owl-nav{
-    position: absolute;
-    top: 0%;
-    margin: 0 auto;
-    width: 100%;
-}
-
-.owl-nav .owl-prev .owl-nav-prev,
-.owl-nav .owl-next .owl-nav-next{
-    color: var(--text-gray);
-    background: transparent;
-    font-size: 2rem;
-}
-
-.owl-theme .owl-nav [class*='owl-']:hover{
-    background: transparent;
-    color: var(--midnight);
-}
-
-.owl-theme .owl-nav [class*='owl-']{
-    outline: none;
-}
-
-
-/* -------x------- Blog Carousel -----x------ */
 
 /* ---------------- Site Content ----------------*/
 
