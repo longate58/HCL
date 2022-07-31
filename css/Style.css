@@ -28,34 +28,6 @@ html, body{
     --Lexend: 'Roboto-Thin', sans-serif;
     --Livvic : 'Roboto-Thin', sans-serif;}
 
-
-/* ---------------- nav ---------------*/
-.nav .nav-brand a{
-    font-size: 2rem;
-    padding: 1rem 0;
-    display: block;
-    top: 0;
-    font-family: var(--Lexend);
-    position: relative;}
-
-.nav .social{
-    padding: 1.4rem 0}
-
-.nav .social i{
-    padding: 0 .8rem;
-    font-size: 2rem;}
-
-.nav .social i:hover{
-    color: #FF9900;}
-
-.text-gray{
-    color: var(--text-gray);}
-
-.text-white{
-    color: var(--text-white);}
-/* ---------------- fin nav ---------------*/
-
-/* ---------------- Site Title ---------------*/
 main .site-title{
     background: url('../assets//Blog-post/fondo_pantalla.jpg');
     background-size: cover;
@@ -79,11 +51,6 @@ main .site-title .btn:hover{
     background: transparent;
     border: 1px solid var(--white);
     color: var(--gray);}
-/* ---------------- fin Site Title ---------------*/
-
-/* --------------- Blog Carousel ------------ */
-.container{
-    margin: 0 5vw;}
 
 main .blog{
     background-repeat: no-repeat;
@@ -107,8 +74,7 @@ main .blog-content .blog-title{
     padding: 2rem 0;
     font-family: var(--Lexend);}
 
-main .blog-content .blog-title h1, h2
-, h3{
+main .blog-content .blog-title h1, h2{
     padding: 2rem 0;
     font-family: var(--Lexend);}
 
@@ -121,11 +87,69 @@ main .blog-content .btn-blog{
 main .blog-content span{
     display: block;}
 
+main .site-content .post-content > .post-image, .post-title > h1, a, p{
+    padding: 0.3rem 2rem;
+    position: relative;
+    font-family: 'Roboto-Thin', sans-serif;
+    font-size: 1.5rem;
+    text-align: justify;
+    margin: 0.5rem;}
+
 section .container .owl-nav{
     position: absolute;
     top: 0%;
     margin: 0 auto;
     width: 100%;}
+
+a{
+    text-decoration: none;
+    color: var(--textgray);}
+
+span{
+    font-family: var(--Abel);}
+/* --------------  ----------- */
+
+.container{
+    margin: 0 8vw;}
+
+.blog-title h3{
+    font-family: var(--Lexend);
+    font-size: 1.5rem;}
+
+.nav{
+    background: #004b97; /* color de fondo encabezado */
+    padding: 0 2rem;
+    height: 0rem;
+    min-height: 8vh;
+    overflow: hidden; /* esconde el menu de navegacion */
+    transition: height 1s ease-in-out;}
+
+.nav .nav-menu{    
+    justify-content: space-between;}
+
+.nav .nav-brand a{
+    font-size: 2rem;
+    padding: 1rem 0;
+    display: block;
+    top: 0;
+    font-family: var(--Lexend);
+    position: relative;}
+
+.nav .social{
+    padding: 1.4rem 0}
+
+.nav .social i{
+    padding: 0 .8rem;
+    font-size: 2rem;}
+
+.nav .social i:hover{
+    color: #FF9900;}
+
+.text-gray{
+    color: var(--text-gray);}
+
+.text-white{
+    color: var(--text-white);}
 
 .owl-nav .owl-prev .owl-nav-prev,
 .owl-nav .owl-next .owl-nav-next{
@@ -139,174 +163,11 @@ section .container .owl-nav{
 
 .owl-theme .owl-nav [class*='owl-']{
     outline: none;}
-/* -------x------- Blog Carousel -----x------ */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-a{
-    text-decoration: none;
-    color: var(--textgray);
-}
 
 .flex-row{
     display: flex;
     flex-direction: row;    
-    flex-wrap: wrap;
-}
-
-
-h1{
-    font-family: var(--Lexend);
-    font-size: 2rem;
-}
-
-h2{
-    font-family: var(--Lexend);
-    font-size: 1.8rem;
-}
-
-h3{
-    font-family: var(--Abel);
-    font-size: 1.5rem;
-}
-
-
-span{
-    font-family: var(--Abel);
-}
-
-
-
-
-
-p{
-    font-family: var(--Lexend);
-    color: var(--text-light);
-    text-align: justify;
-}
-
-/* ------x------- Global Classes -------x-------*/
-
-/* --------------- navbar - Navigation ---------------- */
-
-.nav{
-    background: #004b97; /* color de fondo encabezado */
-    padding: 0 2rem;
-    height: 0rem;
-    min-height: 8vh;
-    overflow: hidden;
-    transition: height 1s ease-in-out;
-}
-
-.nav .items a{    
-    text-decoration: none;
-}
-
-.nav .nav-menu{    
-    justify-content: space-between;
-}
-
-.nav .toggle-collapse{
-    position: absolute;
-    top: 0%;
-    width: 70%;
-    cursor: pointer;
-    display: none;
-}
-
-.nav .toggle-collapse .toggle-icons{
-    display: flex;
-    justify-content: flex-end;
-    padding: 1.7rem 0;
-}
-
-.nav .toggle-collapse .toggle-icons i{
-    font-size: 1.4rem;
-    color: var(--text-gray);
-}
-
-.collapse{
-    height: 30rem;
-}
-
-.nav .nav-items{
-    display: flex;
-    margin: 0;
-}
-
-.nav .nav-items .nav-link{
-    padding: 1.6rem 1rem;
-    font-size: 1.1rem;
-    position: relative;
-    font-family: var(--Abel);
-    font-size: 1.4rem;
-    color: var(--text-white);
-
-}
-
-.nav .nav-items .nav-link:hover{
-    background-color: var(--midnight);
-}
-
-.nav .nav-items .nav-link:hover a{
-    color: var(--text-white);
-}
-
-
-
-
-
-/* -------x------- navbar - Navigation ---------x------- */
-
-
-/* ----------------- Main Content----------- */
-
-/* --------------- Site title ---------------- */
-
-
-
-
-/* --------x------ Site title --------x------- */
-
-
-
-/* ---------------- Site Content ----------------*/
-
-
-main .site-content .post-content > .post-image, .post-title{
-    padding: 1rem 2rem;
-    position: relative;
-}
-
-main .site-content .post-content > .post-image, .post-title > a, p{
-    padding: 1rem 2rem;
-    position: relative;
-    font-family: 'Roboto-Thin', sans-serif;
-    font-size: 1.5rem;
-}
-
-
-
-
-
-
-
-/* -------x------- Sidebar -----------x----------- */
-
-/* ---------x------- Main Content -----x----- */
+    flex-wrap: wrap;}
 
 
 /* ----------------- Footer --------------------- */
@@ -319,7 +180,7 @@ footer.footer{
 
 footer.footer .container{
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
 }
 
 footer.footer .container > div{
@@ -337,6 +198,7 @@ footer.footer .container p{
 }
 footer.footer .container h3{
     color: var(--white);
+    font-size: 1.5rem;
 }
 
 
@@ -353,9 +215,7 @@ footer.rights .flex-row{
 footer.rights .flex-row h4 a{
     color: var(--white);
     text-align: center;
-    font-family: var(--Josefin);
-
-}
+    font-family: var(--Josefin);}
 
 footer.footer .move-up{
     position: absolute;
