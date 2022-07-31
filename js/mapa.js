@@ -41,7 +41,7 @@ var minimap = new L.Control.MiniMap(carto_light,
 // Configurar PopUp
 function popup(feature,layer){
     if(feature.properties && feature.properties.BARRIO){
-        layer.bindPopup("<strong>Barrio: </strong>" + feature.properties.BARRIO + "<br/>" + "<strong>Localidad: </strong>" + feature.properties.TIPOCOMUNA);
+        layer.bindPopup("<strong>Barrio: </strong>" + feature.properties.BARRIO + "<br/>" + "<strong>TIPOCOMUNA: </strong>" + feature.properties.TIPOCOMUNA);
     }
 }
 
@@ -89,7 +89,7 @@ info.onAdd = function(map){
 
 //-------------------------- Agregar el metodo que actualiza el control segun el puntero vaya pasando
 info.update = function(props){
-    this._div.innerHTML = '<h4>Total Variable</h4>' + 
+    this._div.innerHTML = '<h4>Total Habitantes</h4>' + 
                             (props ? '<b>' + props.BARRIO + '</b><br/>' + props.TOT_POB + ' Habitantes</sup>'
                             : 'PASE EL PUNTERO POR LA POLGONAL');
 };
@@ -100,8 +100,8 @@ info.addTo(map);
 //---------- Generar rangos de colores de acuerdo con el atributo o campo TOT_POB
 function getColor(d){
     return  d > 90000 ? '#E4EBF8' :
-            d > 45000? '#5FF397' :
-            d > 10000? '#E4CB6E' :
+            d > 45000? '#E4EBF8' :
+            d > 10000? '#E4EBF8' :
             d > 5000? '#86C1F2' :
             d > 1000 ? '#D79CDC' :
                        '#0000FF';
