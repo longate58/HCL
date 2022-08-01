@@ -1,0 +1,277 @@
+@import url('../css/fonts.css');
+
+:root{
+
+    /*      Theme colors        */
+    --text-gray: #3f4954; /* color de de texto barra de inicio */
+    --text-white:  #FFFFFF;
+    --text-light : #686666da; /* color de de texto contenido */
+    --bg-color: #0f0f0f; /* color de texto general */
+    --white: #ffffff; /* color de de texto pie de pagina */
+    --midnight: #023644; /* color de fondo barra de inicio */
+
+    /* gradient color   */
+    --sky: linear-gradient(120deg, #3D89CF 0%, #066dcb 100%); /* color de fondo anuncios */
+
+    /*      theme font-family   */
+    --Abel: 'Roboto-Thin', sans-serif;
+    --Anton: 'Roboto-Thin', sans-serif;
+    --Josefin : 'Roboto-Thin', sans-serif;
+    --Lexend: 'Roboto-Thin', sans-serif;
+    --Livvic : 'Roboto-Thin', sans-serif;}
+
+html, body{
+    box-sizing: border-box;
+    overflow-x: hidden;
+    font-family: 'Roboto-Thin', sans-serif;
+    box-sizing: border-box;}
+
+main .site-title{
+    background: url('../assets//Blog-post/fondo_pantalla.jpg');
+    background-size: cover;
+    height: 95vh;
+    display: flex;
+    justify-content: center;}
+
+main .site-title .site-background{
+    padding-top: 5rem;
+    text-align: center;
+    color: var(--white);}
+
+main .site-title h1, h3{
+    margin: .3rem;}
+
+main .site-title .btn{
+    margin: 1.8rem;
+    background: var(--sky);}
+
+main .site-title .btn:hover{
+    background: transparent;
+    border: 1px solid var(--white);
+    color: var(--gray);}
+
+main .blog{
+    background-repeat: no-repeat;
+    background-position: right;
+    height: 100vh;
+    width: 100%;
+    background-size: 45%;}
+
+main .blog .blog-post{
+    padding-top: 2rem;}
+
+main .blog-post .blog-content{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 80%;
+    margin: 3rem 2rem;
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.2);}
+
+main .blog-content .blog-title{
+    padding: 2rem 0;
+    font-family: var(--Lexend);}
+
+main .blog-content .blog-title h1, h2{
+    padding: 2rem 0;
+    font-family: var(--Lexend);}
+
+main .blog-content .btn-blog{
+    padding: .7rem 2rem;
+    background: var(--sky);
+    margin: .5rem;
+    color: var(--text-white);}
+
+main .blog-content span{
+    display: block;}
+
+main .site-content .post-content > .post-image, .post-title > h1, a, p{
+    padding: 0.3rem 2rem;
+    position: relative;
+    font-family: 'Roboto-Thin', sans-serif;
+    font-size: 1.5rem;
+    text-align: justify;
+    margin: 0.5rem;}
+
+section .container .owl-nav{
+    position: absolute;
+    top: 0%;
+    margin: 0 auto;
+    width: 100%;}
+
+
+a{
+    text-decoration: none;
+    color: var(--textgray);}
+
+span{
+    font-family: var(--Abel);}
+/* --------------  ----------- */
+
+.container{
+    margin: 0 8vw;}
+
+.blog-title h3{
+    font-family: var(--Lexend);
+    font-size: 1.5rem;}
+
+.nav{
+    background: #004b97; /* color de fondo encabezado */
+    padding: 0 2rem;
+    height: 0rem;
+    min-height: 8vh;
+    overflow: hidden; /* esconde el menu de navegacion */
+    transition: height 1s ease-in-out;}
+
+.nav .nav-menu{    
+    justify-content: space-between;}
+
+.nav .nav-brand a{
+    font-size: 2rem;
+    padding: 1rem 0;
+    display: block;
+    top: 0;
+    font-family: var(--Lexend);
+    position: relative;}
+
+.nav .social{
+    padding: 1.4rem 0}
+
+.nav .social i{
+    padding: 0 .8rem;
+    font-size: 2rem;}
+
+.nav .social i:hover{
+    color: #FF9900;}
+
+.text-gray{
+    color: var(--text-gray);}
+
+.text-white{
+    color: var(--text-white);}
+
+.owl-nav .owl-prev .owl-nav-prev,
+.owl-nav .owl-next .owl-nav-next{
+    color: var(--text-gray);
+    background: transparent;
+    font-size: 2rem;}
+
+.owl-theme .owl-nav [class*='owl-']:hover{
+    background: transparent;
+    color: var(--midnight);}
+
+.owl-theme .owl-nav [class*='owl-']{
+    outline: none;}
+
+.flex-row{
+    display: flex;
+    flex-direction: row;    
+    flex-wrap: wrap;}
+
+
+/* ----------------- Footer --------------------- */
+
+footer.footer{
+    height: 100%;
+    background: #01080f;
+    position: relative;}
+
+footer.footer .container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);}
+
+footer.footer .container > div{
+    flex-grow: 1;
+    flex-basis: 0;
+    padding: 1rem .9rem;}
+
+footer.footer .container h2{
+    color: var(--white);}
+footer.footer .container p{
+    color: var(--white);
+    font-size: 1.1rem;}
+footer.footer .container h3{
+    color: var(--white);
+    font-size: 1.5rem;}
+
+
+footer.footer .follow div i{
+    color: var(--white);
+    padding: 0.8rem;}
+
+footer.rights .flex-row{
+    justify-content: center;
+    font-family: var(--Josefin);}
+
+footer.rights .flex-row h4 a{
+    color: var(--white);
+    text-align: center;
+    font-family: var(--Josefin);}
+
+footer.footer .move-up{
+    position: absolute;
+    right: 6%;
+    top: 50%;}
+
+footer.footer .move-up span{
+    color: #bab8b6;}
+
+footer.footer .move-up span:hover{
+    color: var(--white);
+    cursor: pointer;}
+
+
+
+
+
+/* ---------x------- Footer ----------x---------- */
+
+/*              Viewport less then or equal to 1130px            */
+
+@media only screen and (max-width: 1280px){  
+main .site-title{
+    background: url('../assets//Blog-post/fondo_pantalla.jpg');
+    background-size: cover;
+    height: 35vh;
+    display: flex;
+    justify-content: center;} 
+
+.nav .nav-brand a{
+        font-size: 1.2em;}
+   
+main .blog{
+        height: 35vh;}
+
+main .post-title  p{
+    font-size: 1.8rem;
+    text-align: justify;}
+
+footer.footer .container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);}}
+
+
+@media only screen and (max-width: 820px){  
+main .site-title{
+    background: url('../assets//Blog-post/fondo_pantalla.jpg');
+    background-size: cover;
+    height: 25vh;
+    display: flex;
+    justify-content: center;} 
+
+main .post-title  p{
+    font-size: 1.5rem;
+    text-align: justify;}
+
+footer.footer .container{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);}}
+
+@media only screen and (max-width: 520px){  
+main .site-title{
+    background: url('../assets//Blog-post/fondo_pantalla.jpg');
+    background-size: cover;
+    height: 15vh;
+    display: flex;
+    justify-content: center;} }
+/*        x      Viewport less then or equal to 520px       x     */
