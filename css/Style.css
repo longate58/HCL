@@ -85,13 +85,25 @@ main .blog-content .btn-blog{
 main .blog-content span{
     display: block;}
 
-main .site-content .post-content > .post-image, .post-title > h1, a, p{
+main .post-title h1{
+    padding: 0.2rem 2rem;
+    position: relative;
+    font-family: 'Roboto-Thin', sans-serif;
+    font-size: 2rem;
+    text-align: justify;
+    margin: 0.5rem;}
+
+main .post-title p{
     padding: 0.3rem 2rem;
     position: relative;
     font-family: 'Roboto-Thin', sans-serif;
     font-size: 1.5rem;
     text-align: justify;
     margin: 0.5rem;}
+
+select{
+    font-family: 'Roboto-Thin', sans-serif;
+    font-size: 1.2rem;}   
 
 section .container .owl-nav{
     position: absolute;
@@ -188,6 +200,7 @@ footer.footer .container > div{
 footer.footer .container h2{
     color: var(--white);}
 footer.footer .container p{
+    text-align: justify;
     color: var(--white);
     font-size: 1.1rem;}
 footer.footer .container h3{
@@ -221,29 +234,38 @@ footer.footer .move-up span:hover{
     cursor: pointer;}
 
 
-
-
-
 /* ---------x------- Footer ----------x---------- */
-
-/*              Viewport less then or equal to 1130px            */
-
-@media only screen and (max-width: 1280px){  
+@media only screen and (max-width: 900px){  
 main .site-title{
     background: url('../assets//Blog-post/fondo_pantalla.jpg');
     background-size: cover;
-    height: 35vh;
+    height: 65vh;
     display: flex;
     justify-content: center;} 
 
-.nav .nav-brand a{
-        font-size: 1.2em;}
-   
 main .blog{
-        height: 35vh;}
+        height: 90vh;}
+
+main .blog-content{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 65%;
+    margin: 3rem 2rem;
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.2);}
+
+main .container h1{
+        font-size: 1.8em;}
+
+main .blog-title h3{
+        font-size: 1.2em;}
+
+main .post-title  h1{
+    font-size: 1.8rem;
+    text-align: justify;}
 
 main .post-title  p{
-    font-size: 1.8rem;
+    font-size: 1.1rem;
     text-align: justify;}
 
 footer.footer .container{
@@ -251,27 +273,4 @@ footer.footer .container{
     grid-template-columns: repeat(2, 1fr);}}
 
 
-@media only screen and (max-width: 820px){  
-main .site-title{
-    background: url('../assets//Blog-post/fondo_pantalla.jpg');
-    background-size: cover;
-    height: 25vh;
-    display: flex;
-    justify-content: center;} 
-
-main .post-title  p{
-    font-size: 1.5rem;
-    text-align: justify;}
-
-footer.footer .container{
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);}}
-
-@media only screen and (max-width: 520px){  
-main .site-title{
-    background: url('../assets//Blog-post/fondo_pantalla.jpg');
-    background-size: cover;
-    height: 15vh;
-    display: flex;
-    justify-content: center;} }
 /*        x      Viewport less then or equal to 520px       x     */
