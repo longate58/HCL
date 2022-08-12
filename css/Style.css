@@ -275,7 +275,7 @@ footer.footer .container{
 
 @media only screen and (max-width: 720px){  
 main .site-title{
-    background: url('../assets//Blog-post/fondo_pantalla.jpg');
+    background: url('../assets//Blog-post/fondo_pantalla1.jpg');
     background-size: cover;
     height: 55vh;
     display: flex;
@@ -309,4 +309,46 @@ main .post-title  p{
 footer.footer .container{
     display: grid;
     grid-template-columns: repeat(1, 1fr);}}
+
+@media only screen and (max-width: 520px){  
+main .site-title{
+    background: url('../assets//Blog-post/fondo_pantalla1.jpg');
+    background-size: cover;
+    height: 35vh;
+    display: flex;
+    justify-content: center;} 
+
+main .blog{
+        height: 90vh;}
+
+main .blog-content{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 60%;
+    margin: 1rem 2rem;
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.2);}
+
+.nav .social i{
+    padding: 0 .8rem;
+    font-size: 1.3rem;}
+
+main .container h1{
+        font-size: 1.4em;}
+
+main .blog-title h3{
+        font-size: 1.2em;}
+
+main .post-title  h1{
+    font-size: 1.4rem;
+    text-align: justify;}
+
+main .post-title  p{
+    font-size: 1.1rem;
+    text-align: justify;}
+
+footer.footer .container{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);}}
+
 /*        x      Viewport less then or equal to 520px       x     */
