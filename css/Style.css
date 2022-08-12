@@ -310,7 +310,7 @@ footer.footer .container{
     display: grid;
     grid-template-columns: repeat(1, 1fr);}}
 
-@media only screen and (max-width: 420px){  
+@media only screen and (max-width: 450px){  
 main .site-title{
     background: url('../assets//Blog-post/fondo_pantalla1.jpg');
     background-size: cover;
