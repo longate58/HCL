@@ -89,10 +89,16 @@ info.onAdd = function(map){
 
 //-------------------------- Agregar el metodo que actualiza el control segun el puntero vaya pasando
 info.update = function(props){
-    this._div.innerHTML = '<h4>Total Habitantes</h4>' + 
-                            (props ? '<b>' + props.BARRIO + '</b><br/>' + props.TOT_POB + ' Habitantes</sup>'
+    this._div.innerHTML = '<h4>DATOS DEMOGRAFICOS</h4>' + 
+                            '</b><br/>' +
+                            (props ? '<b>' + props.BARRIO + '</b><br/>' + props.TOT_POB + ' Habitantes</sup>' + 
+                             '</b><br/>' + props.VARONES + ' Masculino</sup>' + '</b><br/>' + props.HEMBRAS + ' Femenino</sup>' +
+                             '</b><br/>' + '</b><br/>' + props.ELECTORES + ' Electores' 
+
+
                             : 'PASE EL PUNTERO POR LA POLGONAL');
 };
+
 
 info.addTo(map);
 
