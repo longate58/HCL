@@ -194,7 +194,7 @@ L.marker([10.4968300, -66.5304963]).addTo(map)
     var logo = L.control({position: 'topleft'});
     logo.onAdd = function(map){
         var div = L.DomUtil.create('div', 'myclass');
-        div.innerHTML= "<img src='assets/logo.png'/ width='110' height='60'  >";
+        div.innerHTML= "<img src='assets/logo.png'/ width='110' height='110'  >";
         return div;
     }
     logo.addTo(map);
