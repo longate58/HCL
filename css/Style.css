@@ -212,11 +212,9 @@ footer.footer .follow div i{
     color: var(--white);
     padding: 0.8rem;}
 
-footer.rights .flex-row{
-    justify-content: center;
-    font-family: var(--Josefin);}
 
 footer.rights .flex-row h4 a{
+    justify-content: center;
     color: var(--white);
     text-align: center;
     font-family: var(--Josefin);}
